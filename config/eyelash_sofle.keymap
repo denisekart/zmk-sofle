@@ -29,45 +29,6 @@
 &soft_off { hold-time-ms = <2000>; };
 
 / {
-
-    #define ALT_WAIT_MS 30
-    #define ALT_TAP_MS  30
-
-    #define EDIT_MOD LC
-
-    #define EDIT_CUT    &kp EDIT_MOD(X)
-    #define EDIT_COPY   &kp EDIT_MOD(C)
-    #define EDIT_PASTE  &kp EDIT_MOD(V)
-    #define WIN_SNIP     &kp LG(LS(S))
-
-    #define MAKE_ALT4(node_name, label_str, D0, D1, D2, D3)                \
-    node_name: node_name {                                                 \
-      compatible = "zmk,behavior-macro";                                   \
-      label = label_str;                                                   \
-      #binding-cells = <0>;                                                \
-      wait-ms = <ALT_WAIT_MS>;                                             \
-      tap-ms  = <ALT_TAP_MS>;                                              \
-      bindings = <                                                         \
-        &kt LALT                                                           \
-        &kp D0 &kp D1 &kp D2 &kp D3                                        \
-        &kt LALT                                                           \
-      >;                                                                   \
-    };
-
-    #define MAKE_ALT_PAIR_MORPH(base, lbl_l, lbl_u, l0,l1,l2,l3, u0,u1,u2,u3) \
-    MAKE_ALT4(base##_l, "ALT+0" #l0 #l1 #l2 #l3 " (" lbl_l ")",             \
-              KP_##l0, KP_##l1, KP_##l2, KP_##l3)                           \
-    MAKE_ALT4(base##_u, "ALT+0" #u0 #u1 #u2 #u3 " (" lbl_u ")",             \
-              KP_##u0, KP_##u1, KP_##u2, KP_##u3)                           \
-    base##_m: base##_m {                                                    \
-      compatible = "zmk,behavior-mod-morph";                                \
-      label = lbl_l "/" lbl_u;                                              \
-      #binding-cells = <0>;                                                 \
-      bindings = < &base##_l  &base##_u >;                                  \
-      mods = <(MOD_LSFT | MOD_RSFT)>;                                       \
-    };
-
-
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
@@ -77,12 +38,8 @@
     };
 
     behaviors {
-        MAKE_ALT_PAIR_MORPH(s_caron, "š", "Š", 0,1,5,4,   0,1,3,8);
-        MAKE_ALT_PAIR_MORPH(z_caron, "ž", "Ž", 0,1,5,8,   0,1,4,2);
-        MAKE_ALT_PAIR_MORPH(c_caron, "č", "Č", 0,2,6,9,   0,2,6,8);
-        MAKE_ALT_PAIR_MORPH(d_stroke,"đ", "Đ", 0,2,7,3,   0,2,7,2);
     };
-    /* Usage: &s_caron_m  &z_caron_m  &c_caron_m  &d_stroke_m */
+
 
     combos {
         compatible = "zmk,combos";
@@ -135,7 +92,7 @@
 &kp GRAVE   &kp F1           &kp F2          &kp F3             &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &kp DELETE
 &trans      &kp GRAVE        &kp HOME        &kp UP             &kp END          &kp LPAR           &mmv MOVE_DOWN   &kp RPAR         &kp HOME         &kp UP      &kp END    &kp MINUS         &kp EQUAL
 &kp CAPS    &kp TILDE        &kp LEFT        &kp DOWN           &kp RIGHT        &kp LBRC           &mmv MOVE_LEFT   &kp RBRC         &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      WIN_SNIP         EDIT_CUT        EDIT_COPY          EDIT_PASTE       &kp LBKT           &mmv MOVE_RIGHT  &kp RBKT         &kp LT           &kp F11     &kp F12    &kp GT            &trans
+&trans      &trans         &trans        &trans          &trans       &kp LBKT           &mmv MOVE_RIGHT  &kp RBKT         &kp LT           &kp F11     &kp F12    &kp GT            &trans
 &kp C_MUTE  &trans           &trans          &trans             &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
 
@@ -157,8 +114,8 @@
             bindings = <
 &kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none       &none      &none        &trans
 &trans     &bt BT_CLR    &none          &none         &OUT_USB       &out OUT_BLE    &mmv MOVE_DOWN   &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &none       &none      &none        &none
-&trans     &none         &s_caron_m     &d_stroke_m   &none          &rgb_ug RGB_ON  &mmv MOVE_LEFT   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none       &none      &none        &none
-&trans     &z_caron_m    &none          &c_caron_m    &none          &rgb_ug RGB_OFF &mmv MOVE_RIGHT  &none            &none            &sys_reset  &soft_off  &bootloader  &none
+&trans     &none         &trans     &trans   &none          &rgb_ug RGB_ON  &mmv MOVE_LEFT   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none       &none      &none        &none
+&trans     &trans    &none          &trans    &none          &rgb_ug RGB_OFF &mmv MOVE_RIGHT  &none            &none            &sys_reset  &soft_off  &bootloader  &none
 &trans     &trans        &trans         &trans        &trans         &trans          &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
 
