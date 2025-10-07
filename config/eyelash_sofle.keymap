@@ -16,8 +16,8 @@
         macros { \
             name: name { \
                 compatible = "zmk,behavior-macro"; \
-                wait-ms = <10>; \
-                tap-ms = <10>; \
+                wait-ms = <30>; \
+                tap-ms = <30>; \
                 #binding-cells = <0>; \
                 /* Inline: hold LALT ... release LALT */ \
                 bindings = <&macro_press &kp LALT>, <&macro_tap unicode_bindings>, <&macro_release &kp LALT>; \
