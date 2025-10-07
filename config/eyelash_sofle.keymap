@@ -61,6 +61,9 @@
 &soft_off { hold-time-ms = <2000>; };
 
 ZMK_UNICODE_PAIR(s_caron, N0,N1,N5,N4,   N0,N1,N3,N8)
+ZMK_UNICODE_PAIR(z_caron, N0,N1,N5,N8,   N0,N1,N4,N2)
+ZMK_UNICODE_PAIR(c_caron, N0,N2,N6,N9,   N0,N2,N6,N8)
+ZMK_UNICODE_PAIR(d_stroke, N0,N2,N7,N3,   N0,N2,N7,N2)
 
 / {
     scroll_encoder: scroll_encoder {
@@ -114,7 +117,7 @@ ZMK_UNICODE_PAIR(s_caron, N0,N1,N5,N4,   N0,N1,N3,N8)
         /* =====================================================================
         * LAYER1 — Nav / Mouse / Editing / RGB
         *
-        * [  `   ] [ F1   ] [ F2   ] [ F3   ] [ F4   ] [ F5   ]       [ MUp  ]       [ F6   ] [ F7   ] [ F8   ] [ F9   ] [ F10  ] [ Del  ]
+        * [  `   ] [ F1   ] [ F2   ] [ F3   ] [ F4   ] [ F5   ]       [ MUp  ]       [ F6   ] [ F7   ] [ F8   ] [ F9   ] [ F10  ] [ BKSP WORD ]
         * [ TRNS ] [  `   ] [ Home ] [  Up  ] [ End  ] [  (   ]       [ MDn  ]       [  )   ] [ Home ] [  Up  ] [ End  ] [  -   ] [  =   ]
         * [ Caps ] [  ~   ] [ Left ] [ Down ] [ Right] [  [   ]       [ MLt  ]       [  ]   ] [ Left ] [ Down ] [ Right] [  [   ] [  ]   ]
         * [ TRNS ] [ Snip ] [ Cut  ] [ Copy ] [ Paste] [ LBkt ]       [ MRt  ]       [ RBkt ] [  <   ] [ F11  ] [ F12  ] [  >   ] [ TRNS ]
@@ -123,7 +126,7 @@ ZMK_UNICODE_PAIR(s_caron, N0,N1,N5,N4,   N0,N1,N3,N8)
         * ===================================================================== */
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3             &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &kp DELETE
+&kp GRAVE   &kp F1           &kp F2          &kp F3             &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &kp LC(BACKSPACE)
 &trans      &kp GRAVE        &kp HOME        &kp UP             &kp END          &kp LPAR           &mmv MOVE_DOWN   &kp RPAR         &kp HOME         &kp UP      &kp END    &kp MINUS         &kp EQUAL
 &kp CAPS    &kp TILDE        &kp LEFT        &kp DOWN           &kp RIGHT        &kp LBRC           &mmv MOVE_LEFT   &kp RBRC         &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &trans      &kp LG(LS(S))    &kp LC(X)       &kp LC(C)         &kp LC(V)       &kp LBKT           &mmv MOVE_RIGHT  &kp RBKT         &kp LT           &kp F11     &kp F12    &kp GT            &trans
@@ -137,19 +140,19 @@ ZMK_UNICODE_PAIR(s_caron, N0,N1,N5,N4,   N0,N1,N3,N8)
         /* =====================================================================
         * LAYER2 — Bluetooth / Output / System / RGB
         *
-        * [  ~   ] [ BT0  ] [ BT1  ] [ BT2  ] [ BT3  ] [ BT4  ]       [ MUp  ]        [ RGB+ ] [ RGB- ] [ None ] [ None ] [ None ] [ TRNS ]
-        * [ TRNS ] [ BTClr] [ None ] [ None ] [ USB  ] [ BLE  ]       [ MDn  ]        [ Sp+  ] [ Sp-  ] [ None ] [ None ] [ None ] [ None ]
-        * [ TRNS ] [ None ] [ š/Š  ] [ đ/Đ  ] [ None ] [ RGBOn]       [ MLt  ]        [ Br+  ] [ Br-  ] [ None ] [ None ] [ None ] [ None ]
-        * [ TRNS ] [ ž/Ž  ] [ None ] [ č/Č  ] [ None ] [ RGBOf]       [ MRt  ]        [ None ] [ None ] [ Reset] [ SoftO] [ Boot ] [ None ]
-        * [ TRNS ] [ TRNS ] [ TRNS ] [ TRNS ] [ TRNS ] [ TRNS ]       [ LClk ]         [ TRNS ] [ TRNS ] [ TRNS ] [ TRNS ] [ TRNS ]
+        * [  ~   ] [ BT0  ] [ BT1  ] [ BT2  ] [ BT3  ] [ BT4  ]       [ MUp  ]        [ RGB+ ] [ RGB- ] [ None ] [ BT clr ]  [ None ] [ TRNS ]
+        * [ TRNS ] [ None ] [ None ] [ None ] [ None ] [ None ]       [ MDn  ]        [ Sp+  ] [ Sp-  ] [ None ] [ Out BT ]  [ None ] [ None ]
+        * [ TRNS ] [ None ] [ š/Š  ] [ đ/Đ  ] [ None ] [ RGBOn]       [ MLt  ]        [ Br+  ] [ Br-  ] [ None ] [ Out USB ] [ None ] [ None ]
+        * [ TRNS ] [ ž/Ž  ] [ None ] [ č/Č  ] [ None ] [ RGBOf]       [ MRt  ]        [ None ] [ None ] [ Reset] [ SoftO]    [ Boot ] [ None ]
+        * [ TRNS ] [ TRNS ] [ TRNS ] [ TRNS ] [ TRNS ] [ TRNS ]       [ LClk ]        [ TRNS ] [ TRNS ] [ TRNS ] [ TRNS ]    [ TRNS ]
         *
         * ===================================================================== */
         layer_2 {
             bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none       &none      &none        &trans
-&trans     &bt BT_CLR    &none          &none         &out OUT_USB       &out OUT_BLE    &mmv MOVE_DOWN   &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &none       &none      &none        &none
-&trans     &none         &s_caron     &trans   &none          &rgb_ug RGB_ON  &mmv MOVE_LEFT   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none       &none      &none        &none
-&trans     &trans    &none          &trans    &none          &rgb_ug RGB_OFF &mmv MOVE_RIGHT  &none            &none            &sys_reset  &soft_off  &bootloader  &none
+&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &mmv MOVE_UP     &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none       &bt BT_CLR      &none        &trans
+&trans     &none         &none          &none         &none          &none           &mmv MOVE_DOWN   &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &none       &out OUT_BLE    &none        &none
+&trans     &none         &s_caron       &d_stroke     &none          &rgb_ug RGB_ON  &mmv MOVE_LEFT   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none       &out OUT_USB    &none        &none
+&trans     &z_caron      &none          &c_caron      &none          &rgb_ug RGB_OFF &mmv MOVE_RIGHT  &none            &none            &sys_reset  &soft_off       &bootloader  &none
 &trans     &trans        &trans         &trans        &trans         &trans          &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
 
