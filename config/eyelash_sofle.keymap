@@ -35,9 +35,9 @@
 
     #define EDIT_MOD LC
 
-    #define CUT    &kp EDIT_MOD(X)
-    #define COPY   &kp EDIT_MOD(C)
-    #define PASTE  &kp EDIT_MOD(V)
+    #define EDIT_CUT    &kp EDIT_MOD(X)
+    #define EDIT_COPY   &kp EDIT_MOD(C)
+    #define EDIT_PASTE  &kp EDIT_MOD(V)
     #define WIN_SNIP     &kp LG(LS(S))
 
     #define MAKE_ALT4(node_name, label_str, D0, D1, D2, D3)                \
@@ -135,7 +135,7 @@
 &kp GRAVE   &kp F1           &kp F2          &kp F3             &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &kp DELETE
 &trans      &kp GRAVE        &kp HOME        &kp UP             &kp END          &kp LPAR           &mmv MOVE_DOWN   &kp RPAR         &kp HOME         &kp UP      &kp END    &kp MINUS         &kp EQUAL
 &kp CAPS    &kp TILDE        &kp LEFT        &kp DOWN           &kp RIGHT        &kp LBRC           &mmv MOVE_LEFT   &kp RBRC         &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      WIN_SNIP         CUT             COPY               PASTE            &kp LBKT           &mmv MOVE_RIGHT  &kp RBKT         &kp LT           &kp F11     &kp F12    &kp GT            &trans
+&trans      WIN_SNIP         EDIT_CUT        EDIT_COPY          EDIT_PASTE       &kp LBKT           &mmv MOVE_RIGHT  &kp RBKT         &kp LT           &kp F11     &kp F12    &kp GT            &trans
 &kp C_MUTE  &trans           &trans          &trans             &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
 
