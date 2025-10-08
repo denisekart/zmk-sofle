@@ -11,37 +11,6 @@
 #include <dt-bindings/zmk/rgb.h>
 
 
-#define UC_MACRO(name, unicode_bindings) \
-    / { \
-        macros { \
-            name: name { \
-                compatible = "zmk,behavior-macro"; \
-                wait-ms = <30>; \
-                tap-ms = <40>; \
-                #binding-cells = <0>; \
-                /* Inline: hold LALT ... release LALT */ \
-                bindings = <&macro_press &kp RALT>, <&macro_tap unicode_bindings>, <&macro_release &kp RALT>; \
-            }; \
-        }; \
-    };
-
-#define UC_MODMORPH(name, uc_binding, shifted_uc_binding) \
-    / { \
-        behaviors { \
-            name: name { \
-                compatible = "zmk,behavior-mod-morph"; \
-                #binding-cells = <0>; \
-                bindings = <uc_binding>, <shifted_uc_binding>; \
-                mods = <(MOD_LSFT|MOD_RSFT)>; \
-            }; \
-        }; \
-    };
-
-#define ZMK_UNICODE_PAIR(name, L0, L1, L2, L3, U0, U1, U2, U3) \
-    UC_MACRO(name ## _lower, &kp L0 &kp L1 &kp L2 &kp L3) \
-    UC_MACRO(name ## _upper, &kp U0 &kp U1 &kp U2 &kp U3) \
-    UC_MODMORPH(name, &name ## _lower, &name ## _upper)
-
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
@@ -59,11 +28,6 @@
 };
 
 &soft_off { hold-time-ms = <2000>; };
-
-ZMK_UNICODE_PAIR(s_caron, KP_N0,KP_N1,KP_N5,KP_N4,   KP_N0,KP_N1,KP_N3,KP_N8)
-ZMK_UNICODE_PAIR(z_caron, KP_N0,KP_N1,KP_N5,KP_N8,   KP_N0,KP_N1,KP_N4,KP_N2)
-ZMK_UNICODE_PAIR(c_caron, KP_N0,KP_N2,KP_N6,KP_N9,   KP_N0,KP_N2,KP_N6,KP_N8)
-ZMK_UNICODE_PAIR(d_stroke, KP_N0,KP_N2,KP_N7,KP_N3,   KP_N0,KP_N2,KP_N7,KP_N2)
 
 / {
     scroll_encoder: scroll_encoder {
@@ -107,7 +71,7 @@ ZMK_UNICODE_PAIR(d_stroke, KP_N0,KP_N2,KP_N7,KP_N3,   KP_N0,KP_N2,KP_N7,KP_N2)
 &kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
 &kp LCTRL   &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
 &kp LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp RSHFT
-&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp ENTER  &mo 2      &kp DELETE &kp RIGHT_ALT    &kp RCTRL
+&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp ENTER  &mo 2      &kp BACKSPACE &kp RIGHT_ALT    &kp RCTRL
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -130,7 +94,7 @@ ZMK_UNICODE_PAIR(d_stroke, KP_N0,KP_N2,KP_N7,KP_N3,   KP_N0,KP_N2,KP_N7,KP_N2)
 &trans      &kp GRAVE        &kp HOME        &kp UP             &kp END          &kp LPAR           &mmv MOVE_DOWN   &kp RPAR         &kp HOME         &kp UP      &kp END    &kp MINUS         &kp EQUAL
 &trans      &kp TILDE        &kp LC(LEFT)    &kp DOWN           &kp LC(RIGHT)        &kp LBRC           &mmv MOVE_LEFT   &kp RBRC         &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &trans      &kp LG(LS(S))    &kp LC(X)       &kp LC(C)         &kp LC(V)       &kp LBKT           &mmv MOVE_RIGHT  &kp RBKT         &kp LT           &kp F11     &kp F12    &kp GT            &trans
-&kp C_MUTE  &trans           &trans          &trans             &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+&kp C_MUTE  &trans           &trans          &trans             &trans           &trans             &mkp LCLK        &trans           &trans           &kp DELETE      &trans     &trans
             >;
 
             display-name = "LOWER";
@@ -150,10 +114,10 @@ ZMK_UNICODE_PAIR(d_stroke, KP_N0,KP_N2,KP_N7,KP_N3,   KP_N0,KP_N2,KP_N7,KP_N2)
         layer_2 {
             bindings = <
 &kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &mmv MOVE_UP     &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none       &bt BT_CLR      &none        &trans
-&trans     &none         &none          &none         &none          &none           &mmv MOVE_DOWN   &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &none       &out OUT_BLE    &none        &none
-&kp CAPS   &none         &s_caron       &d_stroke     &none          &rgb_ug RGB_ON  &mmv MOVE_LEFT   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none       &out OUT_USB    &none        &none
-&trans     &z_caron      &none          &c_caron      &none          &rgb_ug RGB_OFF &mmv MOVE_RIGHT  &none            &none            &none       &none           &none  &kp KP_NLCK
-&trans     &trans        &trans         &trans        &trans         &trans          &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+&trans     &none         &none          &none         &none          &rgb_ug RGB_TOG &mmv MOVE_DOWN   &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &none       &out OUT_BLE    &none        &rgb_ug RGB_COLOR_HSB(0,100,100)
+&kp CAPS   &none         &none          &none         &none          &none           &mmv MOVE_LEFT   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none       &out OUT_USB    &none        &rgb_ug RGB_COLOR_HSB(0,0,100)
+&trans     &none        &none           &none         &none          &none           &mmv MOVE_RIGHT  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &none       &none           &none        &rgb_ug RGB_COLOR_HSB(30,80,100)
+&trans     &trans        &trans         &trans        &trans         &trans          &mkp LCLK        &trans           &trans           &trans      &trans          &trans
             >;
 
             display-name = "RAISE";
