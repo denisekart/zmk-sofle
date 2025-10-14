@@ -27,7 +27,7 @@ layers:
   - O
   - P
   - {t: \, s: '|'}
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - A
   - S
   - D
@@ -40,7 +40,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
   - Z
   - X
   - C
@@ -51,8 +51,8 @@ layers:
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: /, s: '?'}
-  - $$mdi:apple-keyboard-shift$$
+  - '?'
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-command$$
@@ -61,7 +61,7 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - RAISE
+  - {t: 'Ctl+$$mdi:backspace$$', h: RAISE}
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
@@ -78,45 +78,45 @@ layers:
   - F8
   - F9
   - F10
-  - {t: 'Ctl+$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '`', s: '~'}
-  - HOME
+  - $$mdi:backspace-reverse-outline$$
+  - '&LS(TAB)'
+  - Ctl+Y
+  - Ctl+Alt+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
-  - END
-  - (
+  - Ctl+Alt+$$mdi:arrow-right-bold$$
+  - '&td2 LPAR LBKT'
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - )
-  - HOME
+  - '&td2 RPAR RBKT'
+  - Ctl+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
-  - END
+  - Ctl+$$mdi:arrow-right-bold$$
   - {t: '-', s: _}
-  - {t: '=', s: +}
+  - +
   - {t: '$$mdi:transfer$$', type: trans}
-  - '~'
+  - Ctl+A
   - Ctl+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - Ctl+$$mdi:arrow-right-bold$$
-  - '{'
+  - '&td2 LBRC LT'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - '}'
+  - '&td2 RBRC GT'
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
+  - _
+  - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Gui+Sft+S
+  - Ctl+Z
   - Ctl+X
   - Ctl+C
   - Ctl+V
-  - {t: '[', s: '{'}
+  - {t: /, s: '?'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - {t: ']', s: '}'}
-  - <
+  - {t: \, s: '|'}
+  - Gui+Sft+S
   - F11
   - F12
-  - '>'
+  - '*'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -127,7 +127,7 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   RAISE:
@@ -149,13 +149,13 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - RGB TOG
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - RGB SPI
   - RGB SPD
+  - RGB SPI
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - OUT BLE
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB COLOR HSB(270,40,100)
   - RGB COLOR HSB(0,100,100)
   - $$mdi:apple-keyboard-caps$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -164,11 +164,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - RGB BRI
   - RGB BRD
+  - RGB BRI
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - OUT USB
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB COLOR HSB(240,30,100)
   - RGB COLOR HSB(0,0,100)
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -177,12 +177,12 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - RGB HUI
   - RGB HUD
+  - RGB HUI
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - RGB COLOR HSB(30,80,100)
+  - RGB COLOR HSB(10,50,100)
+  - RGB COLOR HSB(45,75,100)
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -194,7 +194,9 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB TOG
 combos:
 - p: [14, 28, 40]
   k: '&soft_off'
+- p: [26, 39]
+  k: {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
