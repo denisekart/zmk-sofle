@@ -44,11 +44,26 @@
     };
 
     behaviors {
-        td2: tap_dance_2 {
+
+        td_lbrc: td_lbrc {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&kp LPAR>, <&kp LBKT>, <&kp LT>;
+        };
+
+        td_rbrc: td_rbrc {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&kp RPAR>, <&kp RBKT>, <&kp GT>;
+        };
+
+        td_paste: td_paste {
+            ompatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&kp LC(V)>, <&kp LG(V)>;
         };
     };
 
@@ -72,18 +87,11 @@
 
         /* =====================================================================
         * LAYER0 — Base
-        *
-        * [ Esc  ] [ 1    ] [ 2    ] [ 3    ] [ 4    ] [ 5    ]       [  ^   ]        [ 6    ] [ 7    ] [ 8    ] [ 9    ] [ 0    ] [ Bksp ]
-        * [ Tab  ] [ Q    ] [ W    ] [ E    ] [ R    ] [ T    ]       [  v   ]        [ Y    ] [ U    ] [ I    ] [ O    ] [ P    ] [  \   ]
-        * [ Ctrl ] [ A    ] [ S    ] [ D    ] [ F    ] [ G    ]       [  <   ]        [ H    ] [ J    ] [ K    ] [ L    ] [  ;   ] [  '   ]
-        * [ LShft] [ Z    ] [ X    ] [ C    ] [ V    ] [ B    ]       [  >   ]        [ N    ] [ M    ] [  ,   ] [  .   ] [  /   ] [ RShft]
-        * [ Mute ] [ Ctrl ] [ GUI  ] [ Alt  ] [ MO1  ] [ Space]       [ Enter]        [ Enter]  [ MO2  ] [ Del  ] [ RAlt ] [ RCtrl]
-        *
         * ===================================================================== */
 
         layer0 {
             bindings = <
-&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7                  &kp N8     &kp N9               &kp N0          &kp BACKSPACE
+&gresc      &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7                  &kp N8     &kp N9               &kp N0          &kp BACKSPACE
 &kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U                   &kp I      &kp O                &kp P           &kp BSLH
 &kp LSHFT   &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J                   &kp K      &kp L                &kp SEMI        &kp APOS
 &sk LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M                   &kp COMMA  &kp DOT              &kp QUESTION    &sk RSHFT
@@ -95,22 +103,15 @@
         };
 
         /* =====================================================================
-        * LAYER1 — Nav / Mouse / Editing / RGB
-        *
-        * [  `   ] [ F1   ] [ F2   ] [ F3   ] [ F4   ] [ F5   ]       [ MUp  ]       [ F6   ] [ F7   ] [ F8   ] [ F9   ] [ F10  ] [ BKSP WORD ]
-        * [ TRNS ] [  `   ] [ Home ] [  Up  ] [ End  ] [  (   ]       [ MDn  ]       [  )   ] [ Home ] [  Up  ] [ End  ] [  -   ] [  =   ]
-        * [ Caps ] [  ~   ] [ Left ] [ Down ] [ Right] [  {   ]       [ MLt  ]       [  }   ] [ Left ] [ Down ] [ Right] [  [   ] [  ]   ]
-        * [ TRNS ] [ Snip ] [ Cut  ] [ Copy ] [ Paste] [ LBKT ]       [ MRt  ]       [ RBkt ] [  <   ] [ F11  ] [ F12  ] [  >   ] [ TRNS ]
-        * [ Mute ] [ TRNS ] [ TRNS ] [ TRNS ] [ TRNS ] [ TRNS ]       [ LClk ]       [ TRNS ] [ TRNS ] [ TRNS ] [ TRNS ] [ TRNS ]
-        *
+        * LAYER1 — Nav / Mouse / Editing
         * ===================================================================== */
         layer_1 {
             bindings = <
-&kp GRAVE       &kp F1           &kp F2             &kp F3             &kp F4               &kp F5                  &mmv MOVE_UP            &kp F6           &kp F7           &kp F8                &kp F9     &kp F10           &kp DELETE
-&LS(TAB)        &kp LC(Y)        &kp LC(LA(LEFT))   &kp UP             &kp LC(LA(RIGHT))    &td2 LPAR LBKT          &mmv MOVE_DOWN          &td2 RPAR RBKT         &kp LC(LEFT)         &kp UP                &kp LC(RIGHT)    &kp MINUS         &kp PLUS
-&trans          &kp LC(A)        &kp LC(LEFT)       &kp DOWN           &kp LC(RIGHT)        &td2 LBRC LT            &mmv MOVE_LEFT          &td2 RBRC GT         &kp LEFT         &kp DOWN              &kp RIGHT  &kp UNDER          &kp EQUAL
-&trans          &kp LC(Z)    &kp LC(X)          &kp LC(C)          &kp LC(V)            &kp FSLH                &mmv MOVE_RIGHT         &kp BSLH         &kp LG(LS(S))           &kp F11               &kp F12     &kp STAR            &trans
-&kp C_MUTE      &trans           &trans             &trans             &trans               &trans                  &mkp LCLK               &trans           &trans           &trans     &trans     &trans
+&kp GRAVE       &kp F1           &kp F2             &kp F3             &kp F4               &kp F5                  &mmv MOVE_UP            &kp F6           &kp F7               &kp F8                &kp F9           &kp F10           &kp DELETE
+&kp LS(TAB)     &kp LC(Y)        &kp LC(LA(LEFT))   &kp UP             &kp LC(LA(RIGHT))    &td_lbrc                &mmv MOVE_DOWN          &td_rbrc         &kp LC(LEFT)         &kp UP                &kp LC(RIGHT)    &kp MINUS         &kp PLUS
+&trans          &kp LC(A)        &kp LC(LEFT)       &kp DOWN           &kp LC(RIGHT)        &kp LBRC                &mmv MOVE_LEFT          &kp RBRC         &kp LEFT             &kp DOWN              &kp RIGHT        &kp UNDER         &kp EQUAL
+&trans          &kp LC(Z)        &kp LC(X)          &kp LC(C)          &td_paste            &kp FSLH                &mmv MOVE_RIGHT         &kp BSLH         &kp LG(LS(S))        &kp F11               &kp F12          &kp STAR          &trans
+&kp C_MUTE      &trans           &trans             &trans             &trans               &trans                  &mkp LCLK               &trans           &trans               &trans                &trans           &trans
             >;
 
             display-name = "LOWER";
@@ -119,19 +120,12 @@
 
         /* =====================================================================
         * LAYER2 — Bluetooth / Output / System / RGB
-        *
-        * [  ~   ] [ BT0  ] [ BT1  ] [ BT2  ] [ BT3  ] [ BT4  ]       [ MUp  ]        [ RGB+ ] [ RGB- ] [ None ] [ BT clr ]  [ None ] [ TRNS ]
-        * [ TRNS ] [ None ] [ None ] [ None ] [ None ] [ None ]       [ MDn  ]        [ Sp+  ] [ Sp-  ] [ None ] [ Out BT ]  [ None ] [ None ]
-        * [ TRNS ] [ None ] [ š/Š  ] [ đ/Đ  ] [ None ] [ RGBOn]       [ MLt  ]        [ Br+  ] [ Br-  ] [ None ] [ Out USB ] [ None ] [ None ]
-        * [ TRNS ] [ ž/Ž  ] [ None ] [ č/Č  ] [ None ] [ RGBOf]       [ MRt  ]        [ None ] [ None ] [ Reset] [ SoftO]    [ Boot ] [ NUM LCK ]
-        * [ TRNS ] [ TRNS ] [ TRNS ] [ TRNS ] [ TRNS ] [ TRNS ]       [ LClk ]        [ TRNS ] [ TRNS ] [ TRNS ] [ TRNS ]    [ TRNS ]
-        *
         * ===================================================================== */
         layer_2 {
             bindings = <
 &kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &mmv MOVE_UP     &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none       &bt BT_CLR      &none        &trans
 &trans     &none         &none          &none         &none          &none           &mmv MOVE_DOWN   &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &none       &out OUT_BLE    &rgb_ug RGB_COLOR_HSB(270,40,100)       &rgb_ug RGB_COLOR_HSB(0,100,100)
-&kp CAPS   &none         &none          &none         &none          &none           &mmv MOVE_LEFT   &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none       &out OUT_USB    &rgb_ug RGB_COLOR_HSB(240,30,100)       &rgb_ug RGB_COLOR_HSB(0,0,100)
+&caps_word &none         &none          &none         &none          &none           &mmv MOVE_LEFT   &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none       &out OUT_USB    &rgb_ug RGB_COLOR_HSB(240,30,100)       &rgb_ug RGB_COLOR_HSB(0,0,100)
 &trans     &none        &none           &none         &none          &none           &mmv MOVE_RIGHT  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &none       &none           &rgb_ug RGB_COLOR_HSB(10,50,100)       &rgb_ug RGB_COLOR_HSB(45,75,100)
 &trans     &trans        &trans         &trans        &trans         &trans          &mkp LCLK        &trans           &trans           &trans      &trans          &rgb_ug RGB_TOG
             >;
