@@ -48,21 +48,21 @@
         td_lbrc: td_lbrc {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp LPAR>, <&kp LBKT>, <&kp LT>;
         };
 
         td_rbrc: td_rbrc {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp RPAR>, <&kp RBKT>, <&kp GT>;
         };
 
         td_pst: td_pst {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp LC(V)>, <&kp LG(V)>;
         };
     };
