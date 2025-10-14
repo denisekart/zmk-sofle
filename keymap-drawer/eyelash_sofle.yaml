@@ -109,7 +109,7 @@ layers:
   - Ctl+Z
   - Ctl+X
   - Ctl+C
-  - '&td_paste'
+  - '&td_pst'
   - {t: /, s: '?'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: \, s: '|'}
