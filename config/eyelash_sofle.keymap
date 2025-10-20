@@ -13,7 +13,7 @@
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
-&msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
+&msc_input_listener { input-processors = <&zip_scroll_scaler 1 1>; };
 
 &sk {
     release-after-ms = <1000>;
@@ -43,7 +43,37 @@
         tap-ms = <100>;
     };
 
+    select_encoder: select_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&kp LC(RIGHT)>, <&msc LC(LEFT)>;
+
+        tap-ms = <100>;
+    };
+
     behaviors {
+
+        td_curly: td_curly {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LBRC>, <&kp RBRC>;
+        };
+
+        td_square: td_square {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LBKT>, <&kp RBKT>;
+        };
+
+        td_arrow: td_arrow {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LPAR>, <&kp LBKT>, <&kp LT>;
+        };
+
 
         td_lbrc: td_lbrc {
             compatible = "zmk,behavior-tap-dance";
@@ -65,6 +95,14 @@
             tapping-term-ms = <200>;
             bindings = <&kp LC(V)>, <&kp LG(V)>; 
         };
+
+        mo_sk: behavior_mo_sk {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&sk>;
+        };
     };
 
 
@@ -76,10 +114,10 @@
             key-positions = <14 28 40>;
         };
 
-        combo_ctrl {
+        /* combo_ctrl {
             bindings = <&sk LCTRL>;
             key-positions = <26 39>;
-        };
+        }; */
     };
 
     keymap {
@@ -92,13 +130,13 @@
         layer0 {
             bindings = <
 &gresc      &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7                  &kp N8     &kp N9               &kp N0          &kp BACKSPACE
-&kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U                   &kp I      &kp O                &kp P           &kp BSLH
-&sk LSHFT   &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J                   &kp K      &kp L                &kp SEMI        &kp APOS
-&sk LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M                   &kp COMMA  &kp DOT              &kp QUESTION    &sk RSHFT
-&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp ENTER  &lt 2 LC(BACKSPACE)      &kp BACKSPACE &kp RIGHT_ALT    &kp RCTRL
+&kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Z      &kp U                   &kp I      &kp O                &kp MINUS           &kp EQUAL
+&sk LCTRL   &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J                   &kp K      &kp L                &kp P        &kp APOS
+&sk LSHFT   &kp Y      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M                   &kp COMMA  &kp DOT              &kp QUESTION    &sk SEMI
+&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo_sk 1 LSHFT   &kp SPACE    &kp ENTER        &kp ENTER  &lt 2 LC(BACKSPACE)      &kp BACKSPACE &kp RIGHT_ALT    &kp RCTRL
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&select_encoder>;
             display-name = "BASE";
         };
 
@@ -108,9 +146,9 @@
         layer_1 {
             bindings = <
 &kp GRAVE       &kp F1           &kp F2             &kp F3             &kp F4               &kp F5                  &mmv MOVE_UP            &kp F6           &kp F7               &kp F8                &kp F9           &kp F10           &kp DELETE
-&kp LS(TAB)     &kp LC(Y)        &kp LC(LA(LEFT))   &kp UP             &kp LC(LA(RIGHT))    &td_lbrc                &mmv MOVE_DOWN          &td_rbrc         &kp LC(LEFT)         &kp UP                &kp LC(RIGHT)    &kp MINUS         &kp PLUS
-&trans          &kp LC(A)        &kp LC(LEFT)       &kp DOWN           &kp LC(RIGHT)        &kp LBRC                &mmv MOVE_LEFT          &kp RBRC         &kp LEFT             &kp DOWN              &kp RIGHT        &kp UNDER         &kp EQUAL
-&trans          &kp LC(Z)        &kp LC(X)          &kp LC(C)          &td_pst              &kp FSLH                &mmv MOVE_RIGHT         &kp BSLH         &kp LG(LS(S))        &kp F11               &kp F12          &kp STAR          &trans
+&kp LS(TAB)     &kp LC(Y)        &kp LC(LA(LEFT))   &kp UP             &kp LC(LA(RIGHT))    &td_square                &mmv MOVE_DOWN          &kp LC(Z)         &kp LC(LEFT)         &kp UP                &kp LC(RIGHT)    &kp MINUS         &kp PLUS
+&trans          &kp LC(A)        &kp LC(LEFT)       &kp DOWN           &kp LC(RIGHT)        &td_curly                &mmv MOVE_LEFT          &kp RBRC         &kp LEFT             &kp DOWN              &kp RIGHT        &kp PIPE         &kp DOUBLE_QUOTES
+&trans          &kp LC(Y)        &kp LC(X)          &kp LC(C)          &td_pst              &kp FSLH                &mmv MOVE_RIGHT         &kp BSLH         &kp LG(LS(S))        &kp F11               &kp F12          &kp STAR          &sk RSHFT
 &kp C_MUTE      &trans           &trans             &trans             &trans               &trans                  &mkp LCLK               &trans           &trans               &trans                &trans           &trans
             >;
 
