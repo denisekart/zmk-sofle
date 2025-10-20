@@ -21,13 +21,13 @@ layers:
   - R
   - T
   - $$mdi:arrow-down-bold$$
-  - Y
+  - Z
   - U
   - I
   - O
-  - P
-  - {t: \, s: '|'}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '-', s: _}
+  - {t: '=', s: +}
+  - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
   - A
   - S
   - D
@@ -38,10 +38,10 @@ layers:
   - J
   - K
   - L
-  - {t: ;, s: ':'}
+  - P
   - {t: '''', s: '"'}
   - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
-  - Z
+  - Y
   - X
   - C
   - V
@@ -52,12 +52,12 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - '?'
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: ;, h: '$$mdi:gesture-tap-hold$$', s: ':'}
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
-  - LOWER
+  - {t: '$$mdi:apple-keyboard-shift$$', h: LOWER}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -84,9 +84,9 @@ layers:
   - Ctl+Alt+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
   - Ctl+Alt+$$mdi:arrow-right-bold$$
-  - '&td_lbrc'
+  - '&td_square'
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - '&td_rbrc'
+  - Ctl+Z
   - Ctl+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
   - Ctl+$$mdi:arrow-right-bold$$
@@ -97,16 +97,16 @@ layers:
   - Ctl+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - Ctl+$$mdi:arrow-right-bold$$
-  - '{'
+  - '&td_curly'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - '}'
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - _
-  - {t: '=', s: +}
+  - '|'
+  - '"'
   - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+Z
+  - Ctl+Y
   - Ctl+X
   - Ctl+C
   - '&td_pst'
@@ -117,7 +117,7 @@ layers:
   - F11
   - F12
   - '*'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -198,5 +198,3 @@ layers:
 combos:
 - p: [14, 28, 40]
   k: '&soft_off'
-- p: [26, 39]
-  k: {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
