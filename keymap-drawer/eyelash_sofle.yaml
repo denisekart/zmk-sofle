@@ -52,7 +52,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - '?'
-  - {t: ;, h: '$$mdi:gesture-tap-hold$$', s: ':'}
+  - {t: ;, s: ':'}
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-command$$
@@ -80,7 +80,7 @@ layers:
   - F10
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:keyboard-tab-reverse$$
-  - Ctl+Y
+  - {t: \, s: '|'}
   - Ctl+Alt+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
   - Ctl+Alt+$$mdi:arrow-right-bold$$
