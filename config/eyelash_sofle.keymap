@@ -132,7 +132,7 @@
 &gresc      &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7                  &kp N8     &kp N9               &kp N0          &kp BACKSPACE
 &kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Z      &kp U                   &kp I      &kp O                &kp MINUS           &kp EQUAL
 &sk LCTRL   &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J                   &kp K      &kp L                &kp P        &kp APOS
-&sk LSHFT   &kp Y      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M                   &kp COMMA  &kp DOT              &kp QUESTION    &sk SEMI
+&sk LSHFT   &kp Y      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M                   &kp COMMA  &kp DOT              &kp QUESTION    &kp SEMI
 &kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo_sk 1 LSHFT   &kp SPACE    &kp ENTER        &kp ENTER  &lt 2 LC(BACKSPACE)      &kp BACKSPACE &kp RIGHT_ALT    &kp RCTRL
             >;
 
@@ -146,7 +146,7 @@
         layer_1 {
             bindings = <
 &kp GRAVE       &kp F1           &kp F2             &kp F3             &kp F4               &kp F5                  &mmv MOVE_UP            &kp F6           &kp F7               &kp F8                &kp F9           &kp F10           &kp DELETE
-&kp LS(TAB)     &kp LC(Y)        &kp LC(LA(LEFT))   &kp UP             &kp LC(LA(RIGHT))    &td_square                &mmv MOVE_DOWN          &kp LC(Z)         &kp LC(LEFT)         &kp UP                &kp LC(RIGHT)    &kp MINUS         &kp PLUS
+&kp LS(TAB)     &kp BSLH        &kp LC(LA(LEFT))   &kp UP             &kp LC(LA(RIGHT))    &td_square                &mmv MOVE_DOWN          &kp LC(Z)         &kp LC(LEFT)         &kp UP                &kp LC(RIGHT)    &kp MINUS         &kp PLUS
 &trans          &kp LC(A)        &kp LC(LEFT)       &kp DOWN           &kp LC(RIGHT)        &td_curly                &mmv MOVE_LEFT          &kp RBRC         &kp LEFT             &kp DOWN              &kp RIGHT        &kp PIPE         &kp DOUBLE_QUOTES
 &trans          &kp LC(Y)        &kp LC(X)          &kp LC(C)          &td_pst              &kp FSLH                &mmv MOVE_RIGHT         &kp BSLH         &kp LG(LS(S))        &kp F11               &kp F12          &kp STAR          &sk RSHFT
 &kp C_MUTE      &trans           &trans             &trans             &trans               &trans                  &mkp LCLK               &trans           &trans               &trans                &trans           &trans
