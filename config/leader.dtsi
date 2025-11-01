@@ -66,21 +66,21 @@
     rider_comment_toggle: rider_comment_toggle {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      bindings = <&kp LCTRL(SLASH)>;
+      bindings = <&kp FSLH>;
     };
 
     /* Format code: Ctrl+Alt+Enter */
     rider_format_code: rider_format_code {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      bindings = <&kp LCTRL(LALT(RETURN))>;
+      bindings = <&kp LC(LA(ENTER))>;
     };
 
     /* Optimize imports: Ctrl+Alt+O */
     rider_optimize_imports: rider_optimize_imports {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      bindings = <&kp LCTRL(LALT(O))>;
+      bindings = <&kp LC(LA(O))>;
     };
 
     /* ---------- Leader + all sequences attached here ---------- */
