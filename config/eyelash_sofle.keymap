@@ -146,6 +146,7 @@
 
             sensor-bindings = <&select_encoder>;
             display-name = "BASE";
+        };
         
         /* =====================================================================
         * LAYER1 — Nav / Editing
