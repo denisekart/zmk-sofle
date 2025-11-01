@@ -1,0 +1,109 @@
+/* config/leader.dtsi
+ * Windows-only. JetBrains Rider minimal.
+ * Optional build.conf: CONFIG_ZMK_LEADER_TIMEOUT=1000
+ */
+
+ / {
+  behaviors {
+    /* ---------- Pair insertions ---------- */
+
+    /* Pair () and place cursor inside */
+    pair_paren: pair_paren {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+    };
+
+    /* Pair "" and place cursor inside */
+    pair_dquote: pair_dquote {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp DQT &kp DQT &kp LEFT>;
+    };
+
+    /* ---------- Wrap SELECTION ---------- */
+
+    /* Wrap selection with "" */
+    dq_sel: dq_sel {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LC(X) &kp DQT &kp LC(V) &kp DQT>;
+    };
+
+    /* Wrap selection with () */
+    paren_sel: paren_sel {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LC(X) &kp LPAR &kp LC(V) &kp RPAR>;
+    };
+
+    /* ---------- Other originals ---------- */
+
+    /* => */
+    arrow_fat: arrow_fat {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp EQUAL &kp GT>;
+    };
+
+    /* ---------- Markdown (code-focused minimal) ---------- */
+
+    /* Code fence block with cursor between fences */
+    md_code_fence: md_code_fence {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <
+        &kp GRAVE &kp GRAVE &kp GRAVE
+        &kp ENTER &kp ENTER
+        &kp GRAVE &kp GRAVE &kp GRAVE
+        &kp UP
+      >;
+    };
+
+    /* ---------- Rider (minimal) ---------- */
+
+    /* Toggle line comment: Ctrl+/ */
+    rider_comment_toggle: rider_comment_toggle {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LCTRL(SLASH)>;
+    };
+
+    /* Format code: Ctrl+Alt+Enter */
+    rider_format_code: rider_format_code {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LCTRL(LALT(RETURN))>;
+    };
+
+    /* Optimize imports: Ctrl+Alt+O */
+    rider_optimize_imports: rider_optimize_imports {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LCTRL(LALT(O))>;
+    };
+
+    /* ---------- Leader + all sequences attached here ---------- */
+
+    leader1: leader1 {
+      compatible = "zmk,behavior-leader-key";
+      #binding-cells = <0>;
+      ignore-keys = <LSHFT RSHFT>;
+
+      /* Text */
+      pair_paren_seq   { sequence = <P P>;     bindings = <&pair_paren>;            };
+      paren_sel_seq    { sequence = <P S>;     bindings = <&paren_sel>;             };
+      pair_dquote_seq  { sequence = <Q Q>;     bindings = <&pair_dquote>;           };
+      dq_sel_seq       { sequence = <Q S>;   bindings = <&dq_sel>;                };
+      arrow_fat_seq    { sequence = <EQUAL EQUAL>;     bindings = <&arrow_fat>;             };
+
+      /* Markdown (minimal) */
+      md_fence_seq     { sequence = <C B>;     bindings = <&md_code_fence>;         };
+
+      /* Rider (minimal) */
+      rider_comment_seq{ sequence = <C C>;     bindings = <&rider_comment_toggle>;  };
+      rider_format_seq { sequence = <C F>;     bindings = <&rider_format_code>;     };
+      rider_imports_seq{ sequence = <C I>;     bindings = <&rider_optimize_imports>;};
+    };
+  };
+};

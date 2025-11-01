@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: urob
+      url-base: https://github.com/urob
   #  - name: gpeye
   #    url-base: https://github.com/GPeye
   projects:
@@ -13,7 +15,10 @@ manifest:
       revision: main
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3
       import: app/west.yml
+    - name: zmk-leader-key
+      remote: urob
+      revision: v0.3
   self:
     path: boards
