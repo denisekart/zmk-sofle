@@ -25,7 +25,7 @@ layers:
   - U
   - I
   - O
-  - {t: '-', s: _}
+  - {t: ;, s: ':'}
   - {t: '=', s: +}
   - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
   - A
@@ -52,11 +52,11 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - '?'
-  - {t: ;, s: ':'}
+  - {t: '-', s: _}
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-command$$
-  - $$mdi:apple-keyboard-option$$
+  - '&td_alt_leader'
   - {t: '$$mdi:apple-keyboard-shift$$', h: LOWER}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -64,7 +64,7 @@ layers:
   - {t: 'Ctl+$$mdi:backspace$$', h: RAISE}
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-option$$
-  - $$mdi:apple-keyboard-control$$
+  - '&key_repeat'
   LOWER:
   - {t: '`', s: '~'}
   - F1
@@ -82,7 +82,7 @@ layers:
   - $$mdi:keyboard-tab-reverse$$
   - {t: \, s: '|'}
   - Ctl+Alt+$$mdi:arrow-left-bold$$
-  - $$mdi:arrow-up-bold$$
+  - Alt+$$mdi:arrow-up-bold$$
   - Ctl+Alt+$$mdi:arrow-right-bold$$
   - '&td_square'
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
@@ -90,12 +90,12 @@ layers:
   - Ctl+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
   - Ctl+$$mdi:arrow-right-bold$$
-  - {t: '-', s: _}
-  - +
+  - {t: ;, s: ':'}
+  - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+A
   - Ctl+$$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
+  - Alt+$$mdi:arrow-down-bold$$
   - Ctl+$$mdi:arrow-right-bold$$
   - '&td_curly'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
@@ -104,7 +104,7 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - '|'
-  - '"'
+  - {t: '''', s: '"'}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Y
   - Ctl+X
@@ -117,7 +117,7 @@ layers:
   - F11
   - F12
   - '*'
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '-', h: '$$mdi:gesture-tap-hold$$', s: _}
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -198,3 +198,5 @@ layers:
 combos:
 - p: [14, 28, 40]
   k: '&soft_off'
+- p: [26, 39]
+  k: {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
