@@ -93,8 +93,8 @@
       /* Text */
       pair_paren_seq   { sequence = <P P>;     bindings = <&pair_paren>;            };
       paren_sel_seq    { sequence = <P S>;     bindings = <&paren_sel>;             };
-      pair_dquote_seq  { sequence = <Q Q>;     bindings = <&pair_dquote>;           };
-      dq_sel_seq       { sequence = <Q S>;   bindings = <&dq_sel>;                };
+      pair_dquote_seq  { sequence = <APOS APOS>;     bindings = <&pair_dquote>;           };
+      dq_sel_seq       { sequence = <APOS S>;   bindings = <&dq_sel>;                };
       arrow_fat_seq    { sequence = <EQUAL EQUAL>;     bindings = <&arrow_fat>;             };
 
       /* Markdown (minimal) */
