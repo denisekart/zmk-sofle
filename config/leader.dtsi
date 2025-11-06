@@ -37,6 +37,42 @@
       bindings = <&kp LC(X) &kp LPAR &kp LC(V) &kp RPAR>;
     };
 
+    dq_w: dq_w {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <
+        &kp LC(LEFT)        /* Move to word start */
+        &kp DQT             /* Type opening " */
+        &kp LC(RIGHT)           /* Move cursor after word */
+        &kp DQT             /* Type closing " */
+        >;
+    };
+    
+    paren_w: paren_w {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <
+        &kp LC(LEFT)        /* Move to word start */
+        &kp LPAR             /* Type opening " */
+        &kp LC(RIGHT)           /* Move cursor after word */
+        &kp RPAR             /* Type closing " */
+        >;
+    };
+
+    
+    duplicate_line: duplicate_line {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <
+            &kp HOME          // Move to start of line
+            &kp LS(END)       // Select to end of line (Shift+End)
+            &kp LC(C)         // Copy
+            &kp END           // Move to end of line
+            &kp ENTER         // New line
+            &kp LC(V)         // Paste
+        >;
+
+
     /* ---------- Other originals ---------- */
 
     /* => */
@@ -93,9 +129,12 @@
       /* Text */
       pair_paren_seq   { sequence = <P P>;     bindings = <&pair_paren>;            };
       paren_sel_seq    { sequence = <P S>;     bindings = <&paren_sel>;             };
+      paren_w_seq    { sequence = <P W>;     bindings = <&paren_w>;             };
       pair_dquote_seq  { sequence = <APOS APOS>;     bindings = <&pair_dquote>;           };
       dq_sel_seq       { sequence = <APOS S>;   bindings = <&dq_sel>;                };
+      dq_w_seq       { sequence = <APOS W>;   bindings = <&dq_w>;                };
       arrow_fat_seq    { sequence = <EQUAL EQUAL>;     bindings = <&arrow_fat>;             };
+      duplicate_line_seq    { sequence = <D D>;     bindings = <&duplicate_line>;             };
 
       /* Markdown (minimal) */
       md_fence_seq     { sequence = <C B>;     bindings = <&md_code_fence>;         };
