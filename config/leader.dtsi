@@ -40,7 +40,8 @@
     dq_w: dq_w {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      bindings = <
+      bindings = <&macro_tap_time 150>,
+        <
         &kp LC(LEFT)        /* Move to word start */
         &kp DQT             /* Type opening " */
         &kp LC(RIGHT)           /* Move cursor after word */
@@ -51,7 +52,8 @@
     paren_w: paren_w {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      bindings = <
+      bindings = <&macro_tap_time 150>,
+        <
         &kp LC(LEFT)        /* Move to word start */
         &kp LPAR             /* Type opening " */
         &kp LC(RIGHT)           /* Move cursor after word */
