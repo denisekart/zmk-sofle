@@ -71,7 +71,7 @@
             &kp ENTER         // New line
             &kp LC(V)         // Paste
         >;
-
+    };
 
     /* ---------- Other originals ---------- */
 
