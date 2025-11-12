@@ -25,7 +25,7 @@ layers:
   - U
   - I
   - O
-  - {t: ;, s: ':'}
+  - P
   - {t: '=', s: +}
   - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
   - A
@@ -38,8 +38,8 @@ layers:
   - J
   - K
   - L
-  - P
   - {t: '''', s: '"'}
+  - {t: ;, s: ':'}
   - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
   - Y
   - X
@@ -90,7 +90,7 @@ layers:
   - Ctl+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
   - Ctl+$$mdi:arrow-right-bold$$
-  - {t: Sft+;, s: 'Sft+:'}
+  - '|'
   - {t: Sft+=, s: Sft++}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+A
@@ -103,8 +103,8 @@ layers:
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - '|'
   - {t: Sft+', s: Sft+"}
+  - {t: Sft+;, s: 'Sft+:'}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Y
   - Ctl+X
