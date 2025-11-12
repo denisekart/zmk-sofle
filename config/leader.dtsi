@@ -165,6 +165,7 @@
       rider_comment_seq{ sequence = <C C>;     bindings = <&rider_comment_toggle>;  };
       rider_format_seq { sequence = <C F>;     bindings = <&rider_format_code>;     };
       rider_imports_seq{ sequence = <C I>;     bindings = <&rider_optimize_imports>;};
+      soft_off_seq{ sequence = <O F F>;     bindings = <&soft_off>;};
     };
   };
 };
