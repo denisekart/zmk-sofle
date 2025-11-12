@@ -78,49 +78,49 @@
         td_curly: td_curly {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <200>;
             bindings = <&kp LBRC>, <&kp RBRC>;
         };
 
         td_paren: td_paren {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <200>;
             bindings = <&kp LPAR>, <&kp RPAR>;
         };
 
         td_square: td_square {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <200>;
             bindings = <&kp LBKT>, <&kp RBKT>;
         };
 
         td_arrow: td_arrow {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <200>;
             bindings = <&kp LT>, <&kp GT>;
         };
 
         td_pst: td_pst {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <200>;
             bindings = <&kp LC(V)>, <&kp LG(V)>; 
         };
 
         td_shft: td_shft {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <200>;
             bindings = <&sk LSHFT>, <&caps_word>; 
         };
 
         td_altwin: td_altwin {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <200>;
             bindings = <&sk LALT>, <&kp LGUI>; 
         };
 
@@ -203,7 +203,7 @@
         layer0 {
             bindings = <
 &gresc      &kp N1     &kp N2        &kp N3        &kp N4           &kp N5       &kp UP_ARROW           &kp N6          &kp N7          &kp N8            &kp N9           &kp N0           &kp BACKSPACE
-&kp TAB     &kp Q      &kp W         &kp E         &kp R            &kp T        &kp DOWN_ARROW         &kp Z           &kp U           &kp I             &kp O            &kp P            &m_plus_equal
+&mt ESC TAB     &kp Q      &kp W         &kp E         &kp R            &kp T        &kp DOWN_ARROW         &kp Z           &kp U           &kp I             &kp O            &kp P            &m_plus_equal
 &td_shft    &kp A      &kp S         &kp D         &kp F            &kp G        &kp LEFT_ARROW         &kp H           &kp J           &kp K             &kp L            &kp APOS         &kp MINUS
 &sk LCTRL   &kp Y      &kp X         &kp C         &mod_v           &kp B        &kp RIGHT_ARROW        &kp N           &kp M           &m_comma_semi     &m_dot_colon     &m_qmark_excl    &m_and_or
 &kp LC(X)   &kp LCTRL  &kp LEFT_GUI  &td_altwin    &mo_sk 1 LSHFT   &kp SPACE    &kp ENTER              &kp ENTER       &lt 2 BKSP      &mt_leader 0 DEL  &sk RIGHT_ALT    &key_repeat
@@ -219,9 +219,9 @@
         layer_1 {
             bindings = <
 &kp GRAVE       &kp F1           &kp F2       &kp F3      &kp F4        &kp F5           &mmv MOVE_UP            &kp F6           &kp F7               &kp F8                &kp F9           &kp F10            &kp DELETE
-&gresc          &kp HASH         &kp N1       &kp N2      &kp N3        &td_curly        &mmv MOVE_DOWN          &td_arrow        &kp LC(LEFT)         &kp UP                &kp LC(RIGHT)    &kp DOLLAR         &kp RIGHT_ALT
+&gresc          &kp N0         &kp N1       &kp N2      &kp N3        &td_curly        &mmv MOVE_DOWN          &td_arrow        &kp LC(LEFT)         &kp UP                &kp LC(RIGHT)    &kp DOLLAR         &kp RIGHT_ALT
 &trans          &kp AT           &kp N4       &kp N5      &kp N6        &td_paren        &mmv MOVE_LEFT          &td_square       &kp LEFT             &kp DOWN              &kp RIGHT        &kp GRAVE          &kp TILDE
-&trans          &kp LC(Z)        &kp N7       &kp N8      &kp N9        &kp FSLH         &mmv MOVE_RIGHT         &kp BSLH         &kp LG(LS(S))        &not_equal            &arrow_fat       &kp PERCENT        &kp STAR
+&trans          &kp HASH        &kp N7       &kp N8      &kp N9        &kp FSLH         &mmv MOVE_RIGHT         &kp BSLH         &kp LG(LS(S))        &not_equal            &arrow_fat       &kp PERCENT        &kp STAR
 &trans          &trans           &trans       &kp N0      &trans        &trans           &mkp LCLK               &trans           &kp BKSP           &kp DEL                &trans           &trans
             >;
 
