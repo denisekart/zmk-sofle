@@ -75,6 +75,17 @@
         >;
     };
 
+    duplicate_sel: duplicate_sel {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <
+            &kp LC(C)         // Copy
+            &kp END           // Move to end of line
+            &kp ENTER         // New line
+            &kp LC(V)         // Paste
+        >;
+    };
+
     /* ---------- Other originals ---------- */
 
     /* => */
@@ -83,6 +94,13 @@
       #binding-cells = <0>;
       bindings = <&kp EQUAL &kp GT>;
     };
+
+    not_equal: not_equal {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp EXCL &kp EQUAL>;
+    };
+
 
     /* ---------- Markdown (code-focused minimal) ---------- */
 
@@ -136,7 +154,9 @@
       dq_sel_seq       { sequence = <APOS S>;   bindings = <&dq_sel>;                };
       dq_w_seq       { sequence = <APOS W>;   bindings = <&dq_w>;                };
       arrow_fat_seq    { sequence = <EQUAL EQUAL>;     bindings = <&arrow_fat>;             };
+      not_equal_seq    { sequence = <P EQUAL>;     bindings = <&not_equal>;             };
       duplicate_line_seq    { sequence = <D D>;     bindings = <&duplicate_line>;             };
+      duplicate_sel_seq    { sequence = <D S>;     bindings = <&duplicate_sel>;             };
 
       /* Markdown (minimal) */
       md_fence_seq     { sequence = <C B>;     bindings = <&md_code_fence>;         };
