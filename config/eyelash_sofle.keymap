@@ -13,7 +13,7 @@
 
 
 #define SMO(name, normal, shifted) \
-    behavior_##name { \
+    ##name: ##name { \
         compatible = "zmk,behavior-mod-morph"; \
         #binding-cells = <0>; \
         bindings = <&kp normal>, <&kp shifted>; \
@@ -21,7 +21,7 @@
     };
 
 #define CMO(name, normal, shifted) \
-    behavior_##name { \
+    ##name: ##name { \
         compatible = "zmk,behavior-mod-morph"; \
         #binding-cells = <0>; \
         bindings = <&kp normal>, <&kp shifted>; \
