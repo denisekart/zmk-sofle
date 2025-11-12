@@ -61,8 +61,8 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - '&td_l2bksp'
-  - '&leader1'
+  - {t: BKSP, h: RAISE}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: '&leader1'}
   - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
   - '&key_repeat'
   LOWER:
@@ -126,8 +126,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&td_l2del'
-  - {t: LOWER, h: toggle}
+  - BKSP
+  - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   RAISE:
@@ -191,10 +191,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - RGB TOG
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB TOG
 combos:
-- p: [14, 28, 40]
-  k: '&soft_off'
+- p: [13, 26]
+  k: $$mdi:keyboard-esc$$
+- p: [27, 28, 29, 30]
+  k: {t: LOWER, h: toggle}
