@@ -40,7 +40,7 @@ layers:
   - L
   - {t: '''', s: '"'}
   - {t: '-', s: _}
-  - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
+  - $$mdi:apple-keyboard-control$$
   - Y
   - X
   - C
