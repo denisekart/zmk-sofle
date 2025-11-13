@@ -145,7 +145,7 @@
       bindings = 
         <&macro_press &soft_off>,
         <&macro_wait_time 500>,
-        <&macro_release &soft_off>,
+        <&macro_release &soft_off>
       ;
     };
 
