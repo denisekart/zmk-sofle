@@ -36,7 +36,6 @@
 &sk {
     release-after-ms = <1000>;
     quick-release;
-    lazy;
 };
 
 &msc {
@@ -169,6 +168,7 @@
             flavor = "hold-preferred";
             tapping-term-ms = <180>;
             bindings = <&mo>, <&sk>;
+            retro-tap;
         };
 
         mo_lead: mo_lead {
@@ -204,8 +204,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <180>;
-            quick-tap-ms = <130>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
             bindings = <&lt>, <&kp>;
             retro-tap;
         };
