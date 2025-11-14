@@ -67,9 +67,9 @@ layers:
   - '&key_repeat'
   LOWER:
   - {t: '`', s: '~'}
-  - F1
-  - F2
-  - F3
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - F4
   - F5
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
