@@ -257,7 +257,7 @@
         layer_1 {
             bindings = <
 &kp GRAVE       &kp F1       &kp F2       &kp F3      &kp F4        &kp F5           &mmv MOVE_UP            &kp F6           &kp F7               &kp F8                &kp F9           &kp F10            &kp DELETE
-&kp ESC  &m_0_bt0         &m_1_bt1       &m_2_bt2      &m_3_bt3        &td_paren        &mmv MOVE_DOWN          &td_arrow        &kp LC(LEFT)         &kp UP                &kp LC(RIGHT)    &kp DOLLAR         &kp RIGHT_ALT
+&mt_bt_esc BT_CLR ESC  &m_0_bt0         &m_1_bt1       &m_2_bt2      &m_3_bt3        &td_paren        &mmv MOVE_DOWN          &td_arrow        &kp LC(LEFT)         &kp UP                &kp LC(RIGHT)    &kp DOLLAR         &kp RIGHT_ALT
 &trans          &kp AT           &kp N4       &kp N5      &kp N6        &td_curly        &mmv MOVE_LEFT          &td_square       &kp LEFT             &kp DOWN              &kp RIGHT        &kp GRAVE          &kp TILDE
 &trans          &kp HASH        &kp N7       &kp N8      &kp N9        &kp FSLH         &mmv MOVE_RIGHT         &kp BSLH         &kp LG(LS(S))        &not_equal            &arrow_fat       &kp PERCENT        &kp STAR
 &trans          &trans           &trans       &kp N0      &trans        &trans           &mkp LCLK               &trans           &lt 2 BKSP           &kp DEL                &trans           &trans
