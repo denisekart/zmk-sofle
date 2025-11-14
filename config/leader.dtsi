@@ -75,6 +75,16 @@
         >;
     };
 
+    copy_line: copy_line {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <
+            &kp HOME          // Move to start of line
+            &kp LS(END)       // Select to end of line (Shift+End)
+            &kp LC(C)         // Copy
+        >;
+    };
+
     duplicate_sel: duplicate_sel {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
