@@ -656,20 +656,17 @@ rect.held, rect.combo.held {
 <g transform="translate(84, 56)" class="key keypos-1">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="24" class="key hold">1</text>
-<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:bluetooth-connect"/>
+<text x="0" y="-4" class="key tap">F1</text>
 </g>
 <g transform="translate(140, 35)" class="key keypos-2">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="24" class="key hold">2</text>
-<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:bluetooth-connect"/>
+<text x="0" y="-4" class="key tap">F2</text>
 </g>
 <g transform="translate(196, 28)" class="key keypos-3">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="24" class="key hold">3</text>
-<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:bluetooth-connect"/>
+<text x="0" y="-4" class="key tap">F3</text>
 </g>
 <g transform="translate(252, 35)" class="key keypos-4">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -721,31 +718,28 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:keyboard-esc"/>
+<use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:bluetooth-off"/>
 <text x="0" y="-24" class="key shifted">`</text>
 </g>
 <g transform="translate(84, 112)" class="key keypos-14">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">0</text>
-<text x="0" y="-24" class="key shifted">)</text>
 </g>
 <g transform="translate(140, 91)" class="key keypos-15">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">1</text>
-<text x="0" y="-24" class="key shifted">!</text>
 </g>
 <g transform="translate(196, 84)" class="key keypos-16">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">2</text>
-<text x="0" y="-24" class="key shifted">@</text>
 </g>
 <g transform="translate(252, 91)" class="key keypos-17">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">3</text>
-<text x="0" y="-24" class="key shifted">#</text>
 </g>
 <g transform="translate(308, 91)" class="key keypos-18">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1121,29 +1115,25 @@ rect.held, rect.combo.held {
 <use href="#mdi:menu-down" xlink:href="#mdi:menu-down" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:menu-down"/>
 <use href="#mdi:mouse" xlink:href="#mdi:mouse" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:mouse"/>
 </g>
-<g transform="translate(616, 91)" class="key keypos-20">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="24" class="key hold">1</text>
-<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:bluetooth-connect"/>
+<g transform="translate(616, 91)" class="key none keypos-20">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key none"/>
+<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-13" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
 </g>
-<g transform="translate(672, 91)" class="key keypos-21">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="24" class="key hold">2</text>
-<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:bluetooth-connect"/>
+<g transform="translate(672, 91)" class="key none keypos-21">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key none"/>
+<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-13" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
 </g>
-<g transform="translate(728, 84)" class="key keypos-22">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="24" class="key hold">3</text>
-<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:bluetooth-connect"/>
+<g transform="translate(728, 84)" class="key none keypos-22">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key none"/>
+<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-13" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
 </g>
-<g transform="translate(784, 91)" class="key keypos-23">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="24" class="key hold">4</text>
-<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:bluetooth-connect"/>
+<g transform="translate(784, 91)" class="key none keypos-23">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key none"/>
+<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-13" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
 </g>
 <g transform="translate(840, 112)" class="key keypos-24">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1271,10 +1261,10 @@ rect.held, rect.combo.held {
 <use href="#mdi:menu-right" xlink:href="#mdi:menu-right" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:menu-right"/>
 <use href="#mdi:mouse" xlink:href="#mdi:mouse" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:mouse"/>
 </g>
-<g transform="translate(616, 203)" class="key keypos-46">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:bluetooth-off"/>
+<g transform="translate(616, 203)" class="key none keypos-46">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key none"/>
+<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-13" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
 </g>
 <g transform="translate(672, 203)" class="key none keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>

@@ -67,9 +67,9 @@ layers:
   - '&key_repeat'
   LOWER:
   - {t: '`', s: '~'}
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
+  - F1
+  - F2
+  - F3
   - F4
   - F5
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
@@ -79,11 +79,11 @@ layers:
   - F9
   - F10
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:keyboard-esc$$', s: '`'}
-  - {t: '0', s: )}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
+  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:bluetooth-off$$', s: '`'}
+  - '0'
+  - '1'
+  - '2'
+  - '3'
   - '&td_paren'
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - '&td_arrow'
@@ -151,10 +151,10 @@ layers:
   - F4
   - F5
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '4', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - RGB COLOR HSB(270,40,100)
   - RGB COLOR HSB(0,100,100)
   - {t: '$$mdi:transfer$$', type: trans}
@@ -177,7 +177,7 @@ layers:
   - F11
   - F12
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - $$mdi:bluetooth-off$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
