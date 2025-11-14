@@ -40,10 +40,10 @@ layers:
   - L
   - {t: '''', s: '"'}
   - {t: '-', s: _}
-  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-control$$'}
   - Y
   - X
-  - C
+  - {t: C, s: '&td_cpy'}
   - {t: V, s: '&td_pst'}
   - B
   - $$mdi:arrow-right-bold$$
