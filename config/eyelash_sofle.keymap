@@ -20,6 +20,15 @@
         mods = <(MOD_LSFT|MOD_RSFT)>; \
     };
 
+#define CMOBT(name, normal, shifted) \
+    name: name { \
+        compatible = "zmk,behavior-mod-morph"; \
+        #binding-cells = <0>; \
+        bindings = <&kp normal>, <&bt BT_SEL shifted>; \
+        mods = <(MOD_LCTL|MOD_RCTL)>; \
+    };
+
+
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -76,6 +85,11 @@
         SMO(m_dot_colon, DOT, COLON)
         SMO(m_qmark_excl, QMARK, EXCL)
         SMO(m_and_or, AMPS, PIPE)
+
+        CMOBT(m_0_bt0, N0, 0)
+        CMOBT(m_1_bt1, N1, 1)
+        CMOBT(m_2_bt2, N2, 2)
+        CMOBT(m_3_bt3, N3, 3)
 
         td_curly: td_curly {
             compatible = "zmk,behavior-tap-dance";
@@ -191,6 +205,15 @@
             bindings = <&lt>, <&kp>;
             retro-tap;
         };
+
+        mt_bt_esc: mt_bt_esc {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <130>;
+            bindings = <&bt BT_CLR>, <&gresc>;
+        };
     };
 
 
@@ -234,8 +257,8 @@
         * ===================================================================== */
         layer_1 {
             bindings = <
-&kp GRAVE       &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2      &kp F4        &kp F5           &mmv MOVE_UP            &kp F6           &kp F7               &kp F8                &kp F9           &kp F10            &kp DELETE
-&gresc          &kp N0         &kp N1       &kp N2      &kp N3        &td_paren        &mmv MOVE_DOWN          &td_arrow        &kp LC(LEFT)         &kp UP                &kp LC(RIGHT)    &kp DOLLAR         &kp RIGHT_ALT
+&kp GRAVE       &kp F1       &kp F2       &kp F3      &kp F4        &kp F5           &mmv MOVE_UP            &kp F6           &kp F7               &kp F8                &kp F9           &kp F10            &kp DELETE
+&mt_bt_esc 0 0  &m_0_bt0         &m_1_bt1       &m_2_bt2      &m_3_bt3        &td_paren        &mmv MOVE_DOWN          &td_arrow        &kp LC(LEFT)         &kp UP                &kp LC(RIGHT)    &kp DOLLAR         &kp RIGHT_ALT
 &trans          &kp AT           &kp N4       &kp N5      &kp N6        &td_curly        &mmv MOVE_LEFT          &td_square       &kp LEFT             &kp DOWN              &kp RIGHT        &kp GRAVE          &kp TILDE
 &trans          &kp HASH        &kp N7       &kp N8      &kp N9        &kp FSLH         &mmv MOVE_RIGHT         &kp BSLH         &kp LG(LS(S))        &not_equal            &arrow_fat       &kp PERCENT        &kp STAR
 &trans          &trans           &trans       &kp N0      &trans        &trans           &mkp LCLK               &trans           &lt 2 BKSP           &kp DEL                &trans           &trans
@@ -252,9 +275,9 @@
         layer_2 {
             bindings = <
 &kp TILDE   &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4      &mmv MOVE_UP        &rgb_ug RGB_EFF    &rgb_ug RGB_EFR    &none              &bt BT_CLR          &none                                   &trans
-&kp ESC     &kp F1         &kp F2          &kp F3         &kp F4          &kp F5            &mmv MOVE_DOWN      &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3        &rgb_ug RGB_COLOR_HSB(270,40,100)       &rgb_ug RGB_COLOR_HSB(0,100,100)
+&kp ESC     &kp F1         &kp F2          &kp F3         &kp F4          &kp F5            &mmv MOVE_DOWN      &none       &none       &none      &none        &rgb_ug RGB_COLOR_HSB(270,40,100)       &rgb_ug RGB_COLOR_HSB(0,100,100)
 &trans      &kp F6         &kp F7          &kp F8         &kp F9          &kp F10           &mmv MOVE_LEFT      &rgb_ug RGB_BRD    &rgb_ug RGB_BRI    &none              &out OUT_USB        &rgb_ug RGB_COLOR_HSB(240,30,100)       &rgb_ug RGB_COLOR_HSB(0,0,100)
-&trans      &none          &none           &none          &kp F11         &kp F12           &mmv MOVE_RIGHT     &bt BT_CLR         &none              &none              &none               &rgb_ug RGB_COLOR_HSB(10,50,100)        &rgb_ug RGB_COLOR_HSB(45,75,100)
+&trans      &none          &none           &none          &kp F11         &kp F12           &mmv MOVE_RIGHT     &none         &none              &none              &none               &rgb_ug RGB_COLOR_HSB(10,50,100)        &rgb_ug RGB_COLOR_HSB(45,75,100)
 &trans      &trans         &trans          &trans         &trans          &trans            &mkp LCLK           &trans             &trans             &rgb_ug RGB_TOG    &trans              &rgb_ug RGB_TOG
             >;
 
