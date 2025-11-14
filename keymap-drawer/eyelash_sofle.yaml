@@ -58,10 +58,10 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - '&td_altwin'
   - {t: '$$mdi:apple-keyboard-shift$$', h: LOWER}
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: BKSP, h: RAISE}
+  - {t: BKSP, h: '&lt 2'}
   - {t: '$$mdi:backspace-reverse-outline$$', h: '&leader1'}
   - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
   - '&key_repeat'
@@ -187,7 +187,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
