@@ -20,14 +20,6 @@
         mods = <(MOD_LSFT|MOD_RSFT)>; \
     };
 
-#define CMO(name, normal, shifted) \
-    name: name { \
-        compatible = "zmk,behavior-mod-morph"; \
-        #binding-cells = <0>; \
-        bindings = <&kp normal>, <&kp shifted>; \
-        mods = <(MOD_LCTL|MOD_RCTL)>; \
-    };
-
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -141,20 +133,6 @@
             bindings = <&sk LALT>, <&kp LGUI>; 
         };
 
-        td_l2bksp: td_l2bksp {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <180>;
-            bindings = <&lt 2 BACKSPACE>, <&kp BACKSPACE>; 
-        };
-
-        td_l2del: td_l2del {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <180>;
-            bindings = <&lt 2 DEL>, <&kp DEL>; 
-        };
-
         mod_v: mod_v {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -185,15 +163,6 @@
             retro-tap;
         };
 
-        mo_lead: mo_lead {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&leader1>;
-        };
-
-
         mt_leader: mt_leader {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -201,17 +170,6 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <130>;
             bindings = <&leader1>, <&kp>;
-        };
-
-
-        mt_spc: mt_spc {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <175>;
-            quick-tap-ms = <125>;
-            bindings = <&kp>, <&kp>;
-            retro-tap;
         };
 
         mt_ctrl: mt_ctrl {
@@ -276,7 +234,7 @@
         * ===================================================================== */
         layer_1 {
             bindings = <
-&kp GRAVE       &kp F1           &kp F2       &kp F3      &kp F4        &kp F5           &mmv MOVE_UP            &kp F6           &kp F7               &kp F8                &kp F9           &kp F10            &kp DELETE
+&kp GRAVE       &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2      &kp F4        &kp F5           &mmv MOVE_UP            &kp F6           &kp F7               &kp F8                &kp F9           &kp F10            &kp DELETE
 &gresc          &kp N0         &kp N1       &kp N2      &kp N3        &td_paren        &mmv MOVE_DOWN          &td_arrow        &kp LC(LEFT)         &kp UP                &kp LC(RIGHT)    &kp DOLLAR         &kp RIGHT_ALT
 &trans          &kp AT           &kp N4       &kp N5      &kp N6        &td_curly        &mmv MOVE_LEFT          &td_square       &kp LEFT             &kp DOWN              &kp RIGHT        &kp GRAVE          &kp TILDE
 &trans          &kp HASH        &kp N7       &kp N8      &kp N9        &kp FSLH         &mmv MOVE_RIGHT         &kp BSLH         &kp LG(LS(S))        &not_equal            &arrow_fat       &kp PERCENT        &kp STAR
