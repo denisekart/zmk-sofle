@@ -79,7 +79,7 @@ layers:
   - F9
   - F10
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:bluetooth-off$$', s: '`'}
+  - {t: '$$mdi:keyboard-esc$$', h: 'BT CLR,', s: '`'}
   - '0'
   - '1'
   - '2'
