@@ -192,11 +192,12 @@
         lt_spc: lt_spc {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <180>;
-            quick-tap-ms = <140>;
+            quick-tap-ms = <150>;
             bindings = <&mo>, <&kp>;
             retro-tap;
+            global-quick-tap;
         };
 
         lt_leader: lt_leader {
@@ -213,6 +214,7 @@
             flavor = "hold-preferred";
             tapping-term-ms = <180>;
             bindings = <&mo>, <&td_shft>;
+            quick-tap-ms = <140>;
             retro-tap;
         };
 
@@ -224,7 +226,12 @@
 
         combo_esc {
             bindings = <&kp ESC>;
-            key-positions = <13 26>;
+            key-positions = <13 14>;
+        };
+
+        combo_del {
+            bindings = <&kp DEL>;
+            key-positions = <24 25>;
         };
 
         combo_tog1 {
@@ -286,7 +293,6 @@
             display-name = "RAISE";
             sensor-bindings = <&scroll_encoder>;
         };
-
 
         /* =====================================================================
         * LAYER3 — Alt num sym setup
