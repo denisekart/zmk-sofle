@@ -175,7 +175,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <130>;
+            quick-tap-ms = <150>;
             bindings = <&leader1>, <&kp>;
         };
 
@@ -200,22 +200,15 @@
             global-quick-tap;
         };
 
-        lt_leader: lt_leader {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <180>;
-            bindings = <&mo>, <&leader1>;
-        };
-
         mo_shft: behavior_mo_sk {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <180>;
             bindings = <&mo>, <&td_shft>;
-            quick-tap-ms = <140>;
+            quick-tap-ms = <150>;
             retro-tap;
+            global-quick-tap;
         };
 
     };
