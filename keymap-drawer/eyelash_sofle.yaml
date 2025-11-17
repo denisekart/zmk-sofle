@@ -57,12 +57,12 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-command$$
   - '&td_altwin'
-  - {t: BKSP, h: LOWER}
+  - {t: '&td_shft', h: LOWER}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '&leader1', h: RAISE}
-  - $$mdi:backspace-reverse-outline$$
+  - {t: BKSP, h: RAISE}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: '&leader1'}
   - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
   - '&key_repeat'
   LOWER:
