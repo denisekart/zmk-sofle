@@ -39,15 +39,6 @@
     quick-release;
 };
 
-skq: sticky_key_quick_release {
-        compatible = "zmk,behavior-sticky-key";
-        #binding-cells = <1>;
-        bindings = <&kp>;
-        release-after-ms = <1000>;
-        quick-release;
-        ignore-modifiers;
-      };
-
 &msc {
     acceleration-exponent = <1>;      // 0
     time-to-max-speed-ms = <100>;       // 300
@@ -218,6 +209,15 @@ skq: sticky_key_quick_release {
             quick-tap-ms = <150>;
             retro-tap;
             global-quick-tap;
+        };
+
+        skq: sticky_key_quick_release {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <1000>;
+            quick-release;
+            ignore-modifiers;
         };
 
     };
