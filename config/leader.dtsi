@@ -149,16 +149,6 @@
       bindings = <&kp LC(LA(O))>;
     };
 
-    macro_soft_off: macro_soft_off {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = 
-        <&macro_press &soft_off>,
-        <&macro_wait_time 500>,
-        <&macro_release &soft_off>
-      ;
-    };
-
     /* ---------- Leader + all sequences attached here ---------- */
 
     leader1: leader1 {
@@ -185,7 +175,7 @@
       rider_comment_seq{ sequence = <C C>;     bindings = <&rider_comment_toggle>;  };
       rider_format_seq { sequence = <C F>;     bindings = <&rider_format_code>;     };
       rider_imports_seq{ sequence = <C I>;     bindings = <&rider_optimize_imports>;};
-      soft_off_seq{ sequence = <O F F>;     bindings = <&macro_soft_off>;};
+      soft_off_seq{ sequence = <O F F>;     bindings = <&soft_off>;};
     };
   };
 };
