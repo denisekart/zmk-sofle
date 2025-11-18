@@ -34,6 +34,10 @@
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 1 1>; };
 
+&soft_off {
+    hold-time-ms = <2000>; 
+};
+
 &sk {
     release-after-ms = <1000>;
     quick-release;
@@ -225,6 +229,12 @@
 
     combos {
         compatible = "zmk,combos";
+
+
+        combo_off {
+            bindings = <&soft_off>;
+            key-positions = <15 16 17 18>;
+        };
 
         combo_esc {
             bindings = <&kp ESC>;
