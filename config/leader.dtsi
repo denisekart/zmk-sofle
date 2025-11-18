@@ -191,7 +191,7 @@
       rider_debug_skiptocursor_seq{ sequence = <R U>;     bindings = <&kp LC(LS(F10))>;} /*rider shifted arrow left*/
       rider_debug_runtocursor_seq{ sequence = <R O>;     bindings = <&kp LC(F10)>;} /*rider shifted arrow right*/
       rider_quick_doc_seq{ sequence = <R D>;     bindings = <&rider_quick_doc>;} /* rider doc */
-      rider_complete_statement_seq{ sequence = <R D>;     bindings = <&kp LC(LS(ENTER))>;} /* rider done */
+      rider_complete_statement_seq{ sequence = <R S>;     bindings = <&kp LC(LS(ENTER))>;} /* rider statement */
     };
   };
 };
