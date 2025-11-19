@@ -188,10 +188,10 @@
       rider_debug_next_seq{ sequence = <R K>;     bindings = <&kp F10>;};/*rider arrow down*/
       rider_debug_step_into_seq{ sequence = <R L>;     bindings = <&kp LA(LS(F11))>;};/*rider arrow right*/
       rider_debug_step_out_seq{ sequence = <R J>;     bindings = <&kp LS(F11)>;}; /*rider arrow left*/
-      rider_debug_skiptocursor_seq{ sequence = <R U>;     bindings = <&kp LC(LS(F10))>;} /*rider shifted arrow left*/
-      rider_debug_runtocursor_seq{ sequence = <R O>;     bindings = <&kp LC(F10)>;} /*rider shifted arrow right*/
-      rider_quick_doc_seq{ sequence = <R D>;     bindings = <&rider_quick_doc>;} /* rider doc */
-      rider_complete_statement_seq{ sequence = <R S>;     bindings = <&kp LC(LS(ENTER))>;} /* rider statement */
+      rider_debug_skiptocursor_seq{ sequence = <R U>;     bindings = <&kp LC(LS(F10))>;}; /*rider shifted arrow left*/
+      rider_debug_runtocursor_seq{ sequence = <R O>;     bindings = <&kp LC(F10)>;}; /*rider shifted arrow right*/
+      rider_quick_doc_seq{ sequence = <R D>;     bindings = <&rider_quick_doc>;}; /* rider doc */
+      rider_complete_statement_seq{ sequence = <R S>;     bindings = <&kp LC(LS(ENTER))>;}; /* rider statement */
     };
   };
 };
