@@ -261,6 +261,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
+- p: [15, 16, 17, 18]
+  k: '&soft_off'
 - p: [13, 14]
   k: $$mdi:keyboard-esc$$
 - p: [24, 25]
