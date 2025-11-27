@@ -95,6 +95,62 @@
         CMOBT(m_2_bt2, N2, 2)
         CMOBT(m_3_bt3, N3, 3)
 
+        td_comma_semi: td_comma_semi {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&m_comma_semi>, <&kp SEMI>;
+        };
+
+        dot_dot_dot: dot_dot_dot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp DOT &kp DOT>;
+        };
+
+        td_plus_equal: td_plus_equal {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&m_plus_equal>, <&kp EQUAL>;
+        };
+        
+         td_dot_colon: td_dot_colon {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&m_dot_colon>, <&kp COLON>, <&dot_dot_dot>;
+        };
+        
+         td_qmark_excl: td_qmark_excl {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&m_qmark_excl>, <&kp EXCL>;
+        };
+
+        td_minus_under: td_minus_under {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp MINUS>, <&kp UNDER>;
+        };
+
+        td_quotes: td_quotes {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SQT>, <&kp DQT>;
+        };
+
+        td_equals: td_equals {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&equal_equal>, <&not_equal>;
+        };
+
+
         td_curly: td_curly {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -208,7 +264,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <180>;
+            tapping-term-ms = <200>;
             bindings = <&mo>, <&td_shft>;
             quick-tap-ms = <150>;
             retro-tap;
@@ -263,9 +319,9 @@
         layer0 {
             bindings = <
 &gresc          &kp N1     &kp N2        &kp N3        &kp N4           &kp N5       &kp UP_ARROW           &kp N6          &kp N7          &kp N8            &kp N9           &kp N0           &kp BACKSPACE
-&mt ESC TAB     &kp Q      &kp W         &kp E         &kp R            &kp T        &kp DOWN_ARROW         &kp Z           &kp U           &kp I             &kp O            &kp P            &m_plus_equal
-&td_shft        &kp A      &kp S         &kp D         &kp F            &kp G        &kp LEFT_ARROW         &kp H           &kp J           &kp K             &kp L            &kp APOS         &kp MINUS
-&mt_ctrl LCTRL LSHFT   &kp Y      &kp X         &mod_c         &mod_v           &kp B        &kp RIGHT_ARROW        &kp N           &kp M           &m_comma_semi     &m_dot_colon     &m_qmark_excl    &m_and_or
+&kp TAB     &kp Q      &kp W         &kp E         &kp R            &kp T        &kp DOWN_ARROW         &kp Z           &kp U           &kp I             &kp O            &kp P            &td_plus_equal
+&kp LSHFT        &kp A      &kp S         &kp D         &kp F            &kp G        &kp LEFT_ARROW         &kp H           &kp J           &kp K             &kp L            &td_quotes         &td_minus_under
+&kp LCTRL   &kp Y      &kp X         &mod_c         &mod_v           &kp B        &kp RIGHT_ARROW        &kp N           &kp M           &td_comma_semi     &td_dot_colon     &td_qmark_excl    &m_and_or
 &kp LC(X)   &kp LCTRL  &kp LEFT_GUI  &td_altwin    &mo_shft 1 0   &kp SPACE    &kp ENTER              &kp ENTER       &lt_spc 2 BKSP     &mt_leader 0 DEL  &sk RIGHT_ALT    &key_repeat
             >;
 
@@ -281,7 +337,7 @@
 &kp GRAVE       &kp F1       &kp F2       &kp F3      &kp F4        &kp F5           &mmv MOVE_UP            &kp F6           &kp F7               &kp F8                &kp F9           &kp F10            &kp DELETE
 &td_esc_clr  &m_0_bt0         &m_1_bt1       &m_2_bt2      &m_3_bt3        &td_paren        &mmv MOVE_DOWN          &td_arrow        &kp LC(LEFT)         &kp UP                &kp LC(RIGHT)    &kp DOLLAR         &kp RIGHT_ALT
 &trans          &kp AT           &kp N4       &kp N5      &kp N6        &td_curly        &mmv MOVE_LEFT          &td_square       &kp LEFT             &kp DOWN              &kp RIGHT        &kp GRAVE          &kp TILDE
-&trans          &kp HASH        &kp N7       &kp N8      &kp N9        &kp FSLH         &mmv MOVE_RIGHT         &kp BSLH         &kp LG(LS(S))        &not_equal            &arrow_fat       &kp PERCENT        &kp STAR
+&trans          &kp HASH        &kp N7       &kp N8      &kp N9        &kp FSLH         &mmv MOVE_RIGHT         &kp BSLH         &kp LG(LS(S))        &td_equals            &arrow_fat       &kp PERCENT        &kp STAR
 &trans          &trans           &trans       &kp N0      &trans        &trans           &mkp LCLK               &trans           &trans           &trans                &trans           &trans
             >;
 

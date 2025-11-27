@@ -111,6 +111,13 @@
       bindings = <&kp EXCL &kp EQUAL>;
     };
 
+    equal_equal: equal_equal {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp EQUAL &kp EQUAL>;
+    };
+
+
 
     /* ---------- Markdown (code-focused minimal) ---------- */
 
@@ -155,6 +162,256 @@
       bindings = <&kp LC(K) &kp I>;
     };
 
+    
+    /* 😀 Grinning Face (Alt+128512) */
+    emoji_grin: emoji_grin {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>;
+        tap-ms = <40>;
+        bindings
+            = <&macro_press   &kp LALT>
+            , <&macro_tap     &kp KP_N1 &kp KP_N2 &kp KP_N8 &kp KP_N5 &kp KP_N1 &kp KP_N2>
+            , <&macro_release &kp LALT>
+            ;
+    };
+
+    /* 😂 Face With Tears of Joy (Alt+128514) */
+    emoji_laugh: emoji_laugh {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>;
+        tap-ms = <40>;
+        bindings
+            = <&macro_press   &kp LALT>
+            , <&macro_tap     &kp KP_N1 &kp KP_N2 &kp KP_N8 &kp KP_N5 &kp KP_N1 &kp KP_N4>
+            , <&macro_release &kp LALT>
+            ;
+    };
+
+    /* ❤️ Heart (Alt+10084) */
+    emoji_heart: emoji_heart {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>;
+        tap-ms = <40>;
+        bindings
+            = <&macro_press   &kp LALT>
+            , <&macro_tap     &kp KP_N1 &kp KP_N0 &kp KP_N0 &kp KP_N8 &kp KP_N4>
+            , <&macro_release &kp LALT>
+            ;
+    };
+
+    /* 👍 Thumbs Up (Alt+128077) */
+    emoji_thumbsup: emoji_thumbsup {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>;
+        tap-ms = <40>;
+        bindings
+            = <&macro_press   &kp LALT>
+            , <&macro_tap     &kp KP_N1 &kp KP_N2 &kp KP_N8 &kp KP_N0 &kp KP_N7 &kp KP_N7>
+            , <&macro_release &kp LALT>
+            ;
+    };
+
+    /* 🔥 Fire (Alt+128293) */
+    emoji_fire: emoji_fire {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>;
+        tap-ms = <40>;
+        bindings
+            = <&macro_press   &kp LALT>
+            , <&macro_tap     &kp KP_N1 &kp KP_N2 &kp KP_N8 &kp KP_N2 &kp KP_N9 &kp KP_N3>
+            , <&macro_release &kp LALT>
+            ;
+    };
+
+    /* € Euro Sign (Alt+0128) */
+    euro_sign: euro_sign {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>;
+        tap-ms = <40>;
+        bindings
+            = <&macro_press   &kp LALT>
+            , <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8>
+            , <&macro_release &kp LALT>
+            ;
+    };
+
+    
+    /* 😅 Grinning Face with Sweat (Alt+128517) */
+    emoji_sweatgrin: emoji_sweatgrin {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>;
+        tap-ms = <40>;
+        bindings
+            = <&macro_press   &kp LALT>
+            , <&macro_tap     &kp KP_N1 &kp KP_N2 &kp KP_N8 &kp KP_N5 &kp KP_N1 &kp KP_N7>
+            , <&macro_release &kp LALT>;
+    };
+
+    /* 😎 Smiling Face with Sunglasses (Alt+128526) */
+    emoji_sunglasses: emoji_sunglasses {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>;
+        tap-ms = <40>;
+        bindings
+            = <&macro_press   &kp LALT>
+            , <&macro_tap     &kp KP_N1 &kp KP_N2 &kp KP_N8 &kp KP_N5 &kp KP_N2 &kp KP_N6>
+            , <&macro_release &kp LALT>;
+    };
+
+    /* 💩 Pile of Poo (Alt+128169) */
+    emoji_poop: emoji_poop {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>;
+        tap-ms = <40>;
+        bindings
+            = <&macro_press   &kp LALT>
+            , <&macro_tap     &kp KP_N1 &kp KP_N2 &kp KP_N8 &kp KP_N1 &kp KP_N6 &kp KP_N9>
+            , <&macro_release &kp LALT>;
+    };
+
+    /* 👌 OK Hand (Alt+128076) */
+    emoji_ok: emoji_ok {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>;
+        tap-ms = <40>;
+        bindings
+            = <&macro_press   &kp LALT>
+            , <&macro_tap     &kp KP_N1 &kp KP_N2 &kp KP_N8 &kp KP_N0 &kp KP_N7 &kp KP_N6>
+            , <&macro_release &kp LALT>;
+    };
+
+    /* ⭐ Star (Alt+11088) */
+    emoji_star: emoji_star {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>;
+        tap-ms = <40>;
+        bindings
+            = <&macro_press   &kp LALT>
+            , <&macro_tap     &kp KP_N1 &kp KP_N1 &kp KP_N0 &kp KP_N8 &kp KP_N8>
+            , <&macro_release &kp LALT>;
+    };
+
+    
+    /* 🤔 Thinking Face (Alt+129300) */
+    emoji_thinking: emoji_thinking {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>; tap-ms = <40>;
+        bindings = <&macro_press &kp LALT>
+                  , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N9 &kp KP_N3 &kp KP_N0 &kp KP_N0>
+                  , <&macro_release &kp LALT>;
+    };
+
+    
+    /* 🙌 Raising Hands (Alt+128588) */
+    emoji_raisehands: emoji_raisehands {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>; tap-ms = <40>;
+        bindings = <&macro_press &kp LALT>
+                  , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N8 &kp KP_N5 &kp KP_N8 &kp KP_N8>
+                  , <&macro_release &kp LALT>;
+    };
+
+    
+    /* Č (Alt+0268) */
+    macro_Ccaron: macro_Ccaron {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>; tap-ms = <40>;
+        bindings = <&macro_press &kp LALT>
+                  , <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N6 &kp KP_N8>
+                  , <&macro_release &kp LALT>;
+    };
+
+    /* č (Alt+0269) */
+    macro_ccaron: macro_ccaron {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>; tap-ms = <40>;
+        bindings = <&macro_press &kp LALT>
+                  , <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N6 &kp KP_N9>
+                  , <&macro_release &kp LALT>;
+    };
+
+    /* Ž (Alt+0142) */
+    macro_Zcaron: macro_Zcaron {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>; tap-ms = <40>;
+        bindings = <&macro_press &kp LALT>
+                  , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N4 &kp KP_N2>
+                  , <&macro_release &kp LALT>;
+    };
+
+    /* ž (Alt+0158) */
+    macro_zcaron: macro_zcaron {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>; tap-ms = <40>;
+        bindings = <&macro_press &kp LALT>
+                  , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N8>
+                  , <&macro_release &kp LALT>;
+    };
+
+    /* Š (Alt+0352) */
+    macro_Scaron: macro_Scaron {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>; tap-ms = <40>;
+        bindings = <&macro_press &kp LALT>
+                  , <&macro_tap &kp KP_N0 &kp KP_N3 &kp KP_N5 &kp KP_N2>
+                  , <&macro_release &kp LALT>;
+    };
+
+    /* š (Alt+0353) */
+    macro_scaron: macro_scaron {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <40>; tap-ms = <40>;
+        bindings = <&macro_press &kp LALT>
+                  , <&macro_tap &kp KP_N0 &kp KP_N3 &kp KP_N5 &kp KP_N3>
+                  , <&macro_release &kp LALT>;
+    };
+
+    
+    /* Č / č */
+    morph_ch: morph_ch {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&macro_Ccaron &macro_ccaron>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    /* Ž / ž */
+    morph_zh: morph_zh {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&macro_Zcaron &macro_zcaron>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    /* Š / š */
+    morph_sh: morph_sh {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&macro_Scaron &macro_scaron>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+
+
     /* ---------- Leader + all sequences attached here ---------- */
 
     leader1: leader1 {
@@ -184,6 +441,7 @@
       rider_refactor_seq{ sequence = <R R>;     bindings = <&kp LC(LS(R))>;};/*rider refactor*/
       rider_breakpoint_seq{ sequence = <R B>;     bindings = <&kp F9>;};/*rider breakpoint*/
       rider_gotoimpl_seq{ sequence = <R I>;     bindings = <&kp LC(F12)>;}; /*rider implementation*/
+      rider_gototype_seq{ sequence = <R T>;     bindings = <&kp LC(LS(F11))>;}; /*rider type*/
       rider_run_seq{ sequence = <R G>;     bindings = <&kp F5>;}; /*rider go*/
       rider_debug_next_seq{ sequence = <R K>;     bindings = <&kp F10>;};/*rider arrow down*/
       rider_debug_step_into_seq{ sequence = <R L>;     bindings = <&kp LA(LS(F11))>;};/*rider arrow right*/
@@ -192,6 +450,9 @@
       rider_debug_runtocursor_seq{ sequence = <R O>;     bindings = <&kp LC(F10)>;}; /*rider shifted arrow right*/
       rider_quick_doc_seq{ sequence = <R D>;     bindings = <&rider_quick_doc>;}; /* rider doc */
       rider_complete_statement_seq{ sequence = <R S>;     bindings = <&kp LC(LS(ENTER))>;}; /* rider statement */
+      
+      screenshot_seq{ sequence = <S S>;     bindings = <&kp LG(LS(S))>;}; 
+      screenshot_seq{ sequence = <E G>;     bindings = <&emoji_sweatgrin>;}; 
     };
   };
 };
