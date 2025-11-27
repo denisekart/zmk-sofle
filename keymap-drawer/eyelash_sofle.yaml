@@ -14,7 +14,7 @@ layers:
   - {t: '9', s: (}
   - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:keyboard-esc$$'}
+  - $$mdi:keyboard-tab$$
   - Q
   - W
   - E
@@ -26,8 +26,8 @@ layers:
   - I
   - O
   - P
-  - {t: +, s: '='}
-  - '&td_shft'
+  - '&td_plus_equal'
+  - $$mdi:apple-keyboard-shift$$
   - A
   - S
   - D
@@ -38,9 +38,9 @@ layers:
   - J
   - K
   - L
-  - {t: '''', s: '"'}
-  - {t: '-', s: _}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-control$$'}
+  - '&td_quotes'
+  - '&td_minus_under'
+  - $$mdi:apple-keyboard-control$$
   - Y
   - X
   - {t: C, s: '&td_cpy'}
@@ -49,9 +49,9 @@ layers:
   - $$mdi:arrow-right-bold$$
   - N
   - M
-  - {t: ',', s: ;}
-  - {t: ., s: ':'}
-  - {t: '?', s: '!'}
+  - '&td_comma_semi'
+  - '&td_dot_colon'
+  - '&td_qmark_excl'
   - {t: '&', s: '|'}
   - Ctl+X
   - $$mdi:apple-keyboard-control$$
@@ -114,7 +114,7 @@ layers:
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: \, s: '|'}
   - Gui+Sft+S
-  - '&not_equal'
+  - '&td_equals'
   - '&arrow_fat'
   - '%'
   - '*'
