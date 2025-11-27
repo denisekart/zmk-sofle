@@ -452,7 +452,7 @@
       rider_complete_statement_seq{ sequence = <R S>;     bindings = <&kp LC(LS(ENTER))>;}; /* rider statement */
       
       screenshot_seq{ sequence = <S S>;     bindings = <&kp LG(LS(S))>;}; 
-      screenshot_seq{ sequence = <E G>;     bindings = <&emoji_sweatgrin>;}; 
+      emoji_sweatgrin_seq{ sequence = <E G>;     bindings = <&emoji_sweatgrin>;}; 
     };
   };
 };
