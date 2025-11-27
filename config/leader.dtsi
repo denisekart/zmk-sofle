@@ -326,7 +326,7 @@
 
     
     /* Č (Alt+0268) */
-    macro_Ccaron: macro_Ccaron {
+    macro_cuppercaron: macro_cuppercaron {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         wait-ms = <40>; tap-ms = <40>;
@@ -346,7 +346,7 @@
     };
 
     /* Ž (Alt+0142) */
-    macro_Zcaron: macro_Zcaron {
+    macro_zuppercaron: macro_zuppercaron {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         wait-ms = <40>; tap-ms = <40>;
@@ -366,7 +366,7 @@
     };
 
     /* Š (Alt+0352) */
-    macro_Scaron: macro_Scaron {
+    macro_uppercaron: macro_suppercaron {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         wait-ms = <40>; tap-ms = <40>;
@@ -390,7 +390,7 @@
     morph_ch: morph_ch {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&macro_Ccaron &macro_ccaron>;
+        bindings = <&macro_cuppercaron &macro_ccaron>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
@@ -398,7 +398,7 @@
     morph_zh: morph_zh {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&macro_Zcaron &macro_zcaron>;
+        bindings = <&macro_zuppercaron &macro_zcaron>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
@@ -406,7 +406,7 @@
     morph_sh: morph_sh {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&macro_Scaron &macro_scaron>;
+        bindings = <&macro_suppercaron &macro_scaron>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
