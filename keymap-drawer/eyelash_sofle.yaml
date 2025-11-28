@@ -79,11 +79,11 @@ layers:
   - F9
   - F10
   - $$mdi:backspace-reverse-outline$$
-  - '&td_esc_clr'
-  - '0'
-  - '1'
-  - '2'
-  - '3'
+  - {t: '&td_bt', s: '$$mdi:bluetooth-off$$'}
+  - {t: '0', s: )}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
   - '&td_paren'
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - '&td_arrow'
