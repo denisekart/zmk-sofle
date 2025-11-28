@@ -460,7 +460,7 @@
       emoji_grin_seq{ sequence = <E S M>;     bindings = <&emoji_grin>;}; 
       emoji_fire_seq{ sequence = <E F I>;     bindings = <&emoji_fire>;}; 
       emoji_thumbsup_seq{ sequence = <E T H>;     bindings = <&emoji_thumbsup>;}; 
-      emoji_laugh_seq{ sequence = <E L A>;     bindings = <&emoji_laugh>;}; 
+      emoji_laugh_seq{ sequence = <E L A>;     bindings = <&emoji_laugh>;};
     };
   };
 };
