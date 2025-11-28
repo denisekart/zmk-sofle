@@ -453,14 +453,14 @@
       
       screenshot_seq{ sequence = <S S>;     bindings = <&kp LG(LS(S))>;}; 
 
-      emoji_sweatgrin_seq{ sequence = <E S W>;     bindings = <&emoji_sweatgrin>;}; 
+      /*emoji_sweatgrin_seq{ sequence = <E S W>;     bindings = <&emoji_sweatgrin>;}; 
       emoji_ok_seq{ sequence = <E O K>;     bindings = <&emoji_ok>;}; 
       euro_sign_seq{ sequence = <E U R>;     bindings = <&euro_sign>;}; 
       emoji_heart_seq{ sequence = <E H E>;     bindings = <&emoji_heart>;}; 
       emoji_grin_seq{ sequence = <E S M>;     bindings = <&emoji_grin>;}; 
       emoji_fire_seq{ sequence = <E F I>;     bindings = <&emoji_fire>;}; 
       emoji_thumbsup_seq{ sequence = <E T H>;     bindings = <&emoji_thumbsup>;}; 
-      emoji_laugh_seq{ sequence = <E L A>;     bindings = <&emoji_laugh>;};
+      emoji_laugh_seq{ sequence = <E L A>;     bindings = <&emoji_laugh>;};*/
     };
   };
 };
