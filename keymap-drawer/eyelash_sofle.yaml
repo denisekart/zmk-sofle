@@ -56,7 +56,7 @@ layers:
   - Ctl+X
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-command$$
-  - '&td_altwin'
+  - {t: '&td_altwin', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '&td_shft', h: LOWER}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
