@@ -351,7 +351,7 @@
 &kp GRAVE       &kp F1       &kp F2       &kp F3      &kp F4        &kp F5           &mmv MOVE_UP            &kp F6           &kp F7               &kp F8                &kp F9           &kp F10            &kp DELETE
 &mod_bt         &kp N0         &kp N1       &kp N2      &kp N3        &td_paren        &mmv MOVE_DOWN          &td_arrow        &kp LC(LEFT)         &kp UP                &kp LC(RIGHT)    &kp DOLLAR         &kp RIGHT_ALT
 &trans          &kp AT           &kp N4       &kp N5      &kp N6        &td_curly        &mmv MOVE_LEFT          &td_square       &kp LEFT             &kp DOWN              &kp RIGHT        &kp GRAVE          &kp TILDE
-&trans          &kp HASH        &kp N7       &kp N8      &kp N9        &kp FSLH         &mmv MOVE_RIGHT         &kp BSLH         &kp LG(LS(S))        &td_equals            &arrow_fat       &kp PERCENT        &kp STAR
+&trans          &kp HASH        &kp N7       &kp N8      &kp N9        &kp FSLH         &mmv MOVE_RIGHT         &kp BSLH         &euro_sign        &td_equals            &arrow_fat       &kp PERCENT        &kp STAR
 &trans          &trans           &trans       &kp N0      &trans        &trans           &mkp LCLK               &trans           &trans           &trans                &trans           &trans
             >;
 
@@ -368,7 +368,7 @@
 &kp TILDE   &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4      &mmv MOVE_UP        &rgb_ug RGB_EFF    &rgb_ug RGB_EFR    &none              &bt BT_CLR          &none                                   &trans
 &kp ESC     &kp F1         &kp F2          &kp F3         &kp F4          &kp F5            &mmv MOVE_DOWN      &none       &none       &none      &none        &rgb_ug RGB_COLOR_HSB(270,40,100)       &rgb_ug RGB_COLOR_HSB(0,100,100)
 &trans      &kp F6         &kp F7          &kp F8         &kp F9          &kp F10           &mmv MOVE_LEFT      &rgb_ug RGB_BRD    &rgb_ug RGB_BRI    &none              &out OUT_USB        &rgb_ug RGB_COLOR_HSB(240,30,100)       &rgb_ug RGB_COLOR_HSB(0,0,100)
-&trans      &none          &none           &none          &kp F11         &kp F12           &mmv MOVE_RIGHT     &none         &none              &none              &none               &rgb_ug RGB_COLOR_HSB(10,50,100)        &rgb_ug RGB_COLOR_HSB(45,75,100)
+&trans      &none          &none           &none          &kp F11         &kp F12           &mmv MOVE_RIGHT     &kp KP_NUMLOCK         &none              &none              &none               &rgb_ug RGB_COLOR_HSB(10,50,100)        &rgb_ug RGB_COLOR_HSB(45,75,100)
 &trans      &trans         &trans          &trans         &trans          &trans            &mkp LCLK           &trans             &trans             &rgb_ug RGB_TOG    &trans              &rgb_ug RGB_TOG
             >;
 
