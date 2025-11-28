@@ -113,7 +113,7 @@ layers:
   - {t: /, s: '?'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: \, s: '|'}
-  - Gui+Sft+S
+  - '&euro_sign'
   - '&td_equals'
   - '&arrow_fat'
   - '%'
@@ -177,7 +177,7 @@ layers:
   - F11
   - F12
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - KP NUMLOCK
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
