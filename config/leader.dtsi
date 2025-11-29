@@ -423,9 +423,9 @@
       pair_paren_seq   { sequence = <P P>;     bindings = <&pair_paren>;            };
       paren_sel_seq    { sequence = <P S>;     bindings = <&paren_sel>;             };
       paren_w_seq    { sequence = <P W>;     bindings = <&paren_w>;             };
-      pair_dquote_seq  { sequence = <APOS APOS>;     bindings = <&pair_dquote>;           };
-      dq_sel_seq       { sequence = <APOS S>;   bindings = <&dq_sel>;                };
-      dq_w_seq       { sequence = <APOS W>;   bindings = <&dq_w>;                };
+      pair_dquote_seq  { sequence = <Q Q>;     bindings = <&pair_dquote>;           };
+      dq_sel_seq       { sequence = <Q S>;   bindings = <&dq_sel>;                };
+      dq_w_seq       { sequence = <Q W>;   bindings = <&dq_w>;                };
       duplicate_line_seq    { sequence = <D D>;     bindings = <&duplicate_line>;             };
       duplicate_sel_seq    { sequence = <D S>;     bindings = <&duplicate_sel>;             };
 
@@ -449,15 +449,20 @@
       rider_complete_statement_seq{ sequence = <R S>;     bindings = <&kp LC(LS(ENTER))>;}; /* rider statement */
       
       screenshot_seq{ sequence = <S S>;     bindings = <&kp LG(LS(S))>;}; 
+      emoji_seq{ sequence = <E E>;     bindings = <&kp LG(DOT)>;}; 
+      euro_sign_seq{ sequence = <E U>;     bindings = <&euro_sign>;}; 
 
-      emoji_sweatgrin_seq{ sequence = <E S W>;     bindings = <&emoji_sweatgrin>;}; 
+      sh_seq{ sequence = <V S>;     bindings = <&morph_sh>;}; 
+      ch_seq{ sequence = <V C>;     bindings = <&morph_ch>;}; 
+      zh_seq{ sequence = <V Z>;     bindings = <&morph_zh>;}; 
+
+      /* emoji_sweatgrin_seq{ sequence = <E S W>;     bindings = <&emoji_sweatgrin>;}; 
       emoji_ok_seq{ sequence = <E O K>;     bindings = <&emoji_ok>;}; 
-      euro_sign_seq{ sequence = <E U R>;     bindings = <&euro_sign>;}; 
       emoji_heart_seq{ sequence = <E H E>;     bindings = <&emoji_heart>;}; 
       emoji_thumbsup_seq{ sequence = <E T H>;     bindings = <&emoji_thumbsup>;}; 
       emoji_laugh_seq{ sequence = <E L A>;     bindings = <&emoji_laugh>;};
       emoji_grin_seq{ sequence = <E S M>;     bindings = <&emoji_grin>;}; 
-      emoji_fire_seq{ sequence = <E F I>;     bindings = <&emoji_fire>;}; 
+      emoji_fire_seq{ sequence = <E F I>;     bindings = <&emoji_fire>;}; */
     };
   };
 };
