@@ -289,7 +289,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&td_shft>;
+            bindings = <&mo>, <&skq>;
             quick-tap-ms = <150>;
             retro-tap;
             global-quick-tap;
@@ -354,10 +354,10 @@
         layer0 {
             bindings = <
 &gresc          &kp N1     &kp N2        &kp N3        &kp N4           &kp N5       &kp UP_ARROW           &kp N6          &kp N7          &kp N8            &kp N9           &kp N0           &kp BACKSPACE
-&kp TAB     &kp Q      &kp W         &kp E         &kp R            &kp T        &kp DOWN_ARROW         &kp Z           &kp U           &kp I             &kp O            &kp P            &td_plus_equal
+&lt_spc 1 TAB     &kp Q      &kp W         &kp E         &kp R            &kp T        &kp DOWN_ARROW         &kp Z           &kp U           &kp I             &kp O            &kp P            &td_plus_equal
 &kp LSHFT        &kp A      &kp S         &kp D         &kp F            &kp G        &kp LEFT_ARROW         &kp H           &kp J           &kp K             &kp L            &td_quotes         &td_minus_under
 &kp LCTRL   &kp Y      &kp X         &mod_c         &mod_v           &kp B        &kp RIGHT_ARROW        &kp N           &kp M           &td_comma_semi     &td_dot_colon     &td_qmark_excl    &m_and_or
-&kp LC(X)   &kp LCTRL  &kp LEFT_GUI  &mt_altlead LALT 0    &mo_shft 1 0   &kp SPACE    &kp ENTER              &kp ENTER       &lt_spc 2 BKSP     &mod_qtap RSHFT DEL  &sk RIGHT_ALT    &key_repeat
+&kp LC(X)   &kp LCTRL  &kp LEFT_GUI  &mt_altlead LALT 0    &mo_shft 1 LSHFT   &kp SPACE    &kp ENTER              &kp ENTER       &lt_spc 2 BKSP     &mod_qtap RSHFT DEL  &sk RIGHT_ALT    &key_repeat
             >;
 
             sensor-bindings = <&select_encoder>;
