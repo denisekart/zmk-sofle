@@ -292,7 +292,7 @@
             quick-tap-ms = <150>;
             bindings = <&mo>, <&kp>;
             retro-tap;
-            global-quick-tap;
+            hold-while-undecided;
         };
 
         mo_shft: behavior_mo_sk {
